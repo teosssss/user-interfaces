@@ -1,0 +1,196 @@
+.grid{
+    
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.2fr 1.2fr 0.8fr;
+    /*matrice sito 4X4 la divido in area
+    col punto indico un area bianca*/
+    grid-template-areas: 
+    "header header header header"
+    "sidebar content content content"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+    grid-gap: 0.2rem;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #214e21;
+    text-align: center;
+    
+} 
+
+.grid>div{
+    padding: 30px 8%;
+    /*curve sui bordi*/
+    border-radius: 10px;
+    
+}
+
+
+
+.header{
+    grid-area: header;
+    background-color:#a7ffea;
+    display: flex;
+    /*mette gli elementi all inizio del blocco*/
+    justify-content: flex-start;
+    align-items: center;
+
+    
+}
+
+.logo{   
+    height: 40px;
+    width: 100px;
+}
+
+
+.menu{
+    list-style: none;
+}
+
+.menu li{
+    display:inline-block;
+    padding:0 20px;
+}
+
+.menu li a{
+    transition: all .3s ease;
+}
+
+.menu a:hover{
+    font-size: 13px;
+    
+}
+
+a,button{
+    padding:0 20px ;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 600; 
+    font-size: 12px;
+    color: #214e21;
+    text-align: center;
+    text-decoration: none;
+}
+button{
+    padding:9px 25px;
+    background:#1de9b6;
+    border: none;
+    border-radius: 10px;
+    cursor:pointer;
+    transition:all .3s ease;
+    /*lo posiziono alla fine*/
+    margin-left: auto;
+}
+/*colore quando ci passo sopra*/
+button:hover{
+    font-size: 13px;
+    color:  #214e21;
+}
+
+.content{
+    background-color: #84ffff;
+    grid-area: content;
+}
+
+
+.sidebar{
+    background-color: #18ffff;
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.sidebar li{
+    list-style: none;
+    padding: 20px 40px;
+    transition: all .3s ease;
+
+}
+
+.sidebar li a:hover{
+    font-size: 13px;
+    color:  #214e21;
+}
+
+.bottom{
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+
+
+.content1{
+    background-color: #6fffd2;
+    grid-area: content1;
+    
+    /*place-self: center;*/
+}
+
+.content2{
+    background-color: #64ffda;
+    grid-area: content2;
+    
+    /*place-self: center;*/
+}
+.content3{
+    background-color: #73ffba;
+    grid-area: content3;
+    
+    /*place-self: center;*/
+}
+
+.footer{
+    background-color: #1de9b6;
+    grid-area: footer;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        "header"
+        "sidebar"
+        "content"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    } 
+    .header{
+        grid-area: header;
+        background-color:#a7ffea;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: center;       
+    }
+    .menu{
+        padding: 0;
+    }
+
+    
+    
+    button{
+    margin-right: auto;
+    }
+
+
+    
+}
+
+
+  
