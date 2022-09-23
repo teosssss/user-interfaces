@@ -1,15 +1,15 @@
 .grid{
     
     display: grid;
-    height: 100vh;
+    height: 98vh;
     grid-template-columns: 0.8fr 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 1.2fr 1.2fr 0.8fr;
     /*matrice sito 4X4 la divido in area
     col punto indico un area bianca*/
     grid-template-areas: 
     "header header header header"
-    "sidebar content content content"
     "sidebar content1 content2 content3"
+    "sidebar content4 content5 content6"
     "sidebar footer footer footer";
     grid-gap: 0.2rem;
     font-family: "Montserrat",sans-serif;
@@ -30,8 +30,8 @@
 
 
 .header{
+    background-color: #a7ffea;
     grid-area: header;
-    background-color:#a7ffea;
     display: flex;
     /*mette gli elementi all inizio del blocco*/
     justify-content: flex-start;
@@ -78,25 +78,28 @@ button{
     background:#1de9b6;
     border: none;
     border-radius: 10px;
-    cursor:pointer;
     transition:all .3s ease;
     /*lo posiziono alla fine*/
-    margin-left: auto;
 }
+
 /*colore quando ci passo sopra*/
 button:hover{
     font-size: 13px;
     color:  #214e21;
 }
-
-.content{
-    background-color: #84ffff;
-    grid-area: content;
+.registrationBtn{
+    margin-left: auto;
 }
 
 
-.sidebar{
+
+#signInBtn{
     background-color: #18ffff;
+
+}
+
+.sidebar{
+    background-color: #a7ffea;
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
@@ -126,25 +129,59 @@ button:hover{
 
 
 .content1{
-    background-color: #6fffd2;
+    position: relative;
     grid-area: content1;
-    
+    background-image: url('../assets/img/music2.avif');
+    background-size: cover;
+
     /*place-self: center;*/
 }
 
+
+
 .content2{
-    background-color: #64ffda;
+    position: relative;
     grid-area: content2;
+    background-image: url('../assets/img/music0.jpeg');
+    background-size: cover;
     
     /*place-self: center;*/
 }
 .content3{
-    background-color: #73ffba;
+    position: relative;
     grid-area: content3;
+    background-image: url('../assets/img/bg-masthead.jpeg');
+    background-size: cover;
     
     /*place-self: center;*/
 }
+.content4{
+    position: relative;
+    grid-area: content4;
+    background-image: url('../assets/img/bg-searchBar.jpeg');
+    background-size: cover;
 
+    
+    /*place-self: center;*/
+}
+.content5{
+    position: relative;
+    grid-area: content5;
+    background-image: url('../assets/img/music3.avif');
+    background-size: cover;
+    
+    /*place-self: center;*/
+}
+.content6{
+    position: relative;
+    grid-area: content6;
+    background-image: url('../assets/img/music1.avif');
+    background-size: cover;
+
+    
+
+    /*place-self: center;*/
+}
 .footer{
     background-color: #1de9b6;
     grid-area: footer;
@@ -153,23 +190,66 @@ button:hover{
 
 
 
+.content1:hover audio{
+    display: inline;
+}
+.content2:hover audio{
+    display: inline;
+}
+.content3:hover audio{
+    transition: all 3s ease;
+    display: inline;
+}
+.content4:hover audio{
+    display: inline;
+}
+.content5:hover audio{
+    display: inline;
+}
+.content6:hover audio{
+    display: inline;
+}
+
+audio{
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    object-fit: contain;
+    display: none;
+    position: absolute;
+    bottom: 10;
+    left:0;
+    right: 0;
+}
 
 
 
 
-@media only screen and (max-width: 600px) {
+
+
+
+
+@media only screen and (max-width: 700px) {
     .grid{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-rows: auto;
         grid-template-areas: 
         "header"
         "sidebar"
-        "content"
         "content1"
         "content2"
         "content3"
+        "content4"
+        "content5"
+        "content6"
         "footer";
     } 
+
+    audio{
+        display: inline;
+
+    }
+
     .header{
         grid-area: header;
         background-color:#a7ffea;
@@ -178,14 +258,17 @@ button:hover{
         justify-content: flex-start;
         align-items: center;       
     }
-    .menu{
-        padding: 0;
+   
+    .registrationBtn{
+        display: none;
+    }
+    
+    .sidebar{
+        display: inline-block;
     }
 
-    
-    
-    button{
-    margin-right: auto;
+    .bottom{
+        display: none;
     }
 
 
