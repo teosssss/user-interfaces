@@ -153,7 +153,7 @@ i{
     grid-area: content4;
     background-image: url('../assets/img/bg-searchBar.jpeg');
     background-size: cover;
-
+    
     
     /*place-self: center;*/
 }
@@ -162,6 +162,7 @@ i{
     grid-area: content5;
     background-image: url('../assets/img/music3.avif');
     background-size: cover;
+
     
     /*place-self: center;*/
 }
@@ -222,7 +223,7 @@ audio{
 
 
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 726px) {
     .grid{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
