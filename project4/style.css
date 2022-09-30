@@ -15,7 +15,7 @@ making borders, gaps and deciding how things looks*/
     grid-gap: 5px;
     grid-template-areas: 
       'header header' 
-      'left  content' 
+      'sidebar  content' 
       'footer footer';
       background-color: #041C32;
 }
@@ -31,9 +31,9 @@ making borders, gaps and deciding how things looks*/
    
 }
 
-.left{
+.sidebar{
     background-color: #04293A;
-    grid-area: left;
+    grid-area: sidebar;
     display: flex;
 }
 .footer{
@@ -157,10 +157,11 @@ audio {
     grid-template-columns: 1fr;
     grid-template-areas: 
     'header'
-    'left'
+    'sidebar'
     'content'
     'footer';
     }
+    
     .content {
         display: grid;
         grid-template-columns: 1fr 1fr; 
@@ -188,7 +189,7 @@ audio {
         grid-template-columns: 1fr;
         grid-template-areas: 
         'header'
-        'left'
+        'sidebar'
         'content'
         'footer';
         }
@@ -221,7 +222,7 @@ audio {
         grid-template-columns: 1fr;
         grid-template-areas: 
         'header'
-        'left'
+        'sidebar'
         'content'
         'footer';
         }
