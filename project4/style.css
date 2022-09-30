@@ -10,14 +10,14 @@ making borders, gaps and deciding how things looks*/
 .grid-container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 0.18fr 0.85fr;
+    grid-template-columns: 0.21fr 0.8fr;
     grid-template-rows: 0.4fr 3fr 0.4fr;
     grid-gap: 5px;
     grid-template-areas: 
       'header header' 
       'left  content' 
       'footer footer';
-      background-color: #red;
+      background-color: #041C32;
 }
 
 .grid-container>div{
@@ -215,32 +215,7 @@ audio {
     
 }
 
-@media (min-width:952px) and (max-width: 1200px ) {
-    
-        .content {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr; 
-            grid-template-rows: auto auto auto auto auto;
-            grid-gap: 10px;
-        }
-        .content>div{
-            padding-top: 15px;
-            padding-bottom: 45px;
-            padding-left: 4px;
-            padding-right: 4px;
-            background-size: cover;
-            min-height: 175px;
-            position: relative;
-            background-color: #041C32;
-            border-radius: 10px;
-        }
-        .logo{
-            width: auto;
-        }
-    
-}
-
-@media (min-width:768px) and (max-width: 952px ) {
+@media (min-width:768px) and (max-width: 1200px ) {
     .grid-container  {
         grid-template-rows: 0.5fr 1fr 2fr 0.5fr;
         grid-template-columns: 1fr;
