@@ -17,7 +17,7 @@ making borders, gaps and deciding how things looks*/
       'header header' 
       'left  content' 
       'footer footer';
-      background-color: #041C32;
+      background-color: #red;
 }
 
 .grid-container>div{
