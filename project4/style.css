@@ -66,7 +66,6 @@ making borders, gaps and deciding how things looks*/
 }
 
 button {
-    float: right;
     margin: 5px;  
     margin-right: 10px;  
     margin-top: 15px;
@@ -78,9 +77,14 @@ button {
     font-size: 14px;
     color: white;
     }
+
 button:hover{
     background-color: #06466381; 
 
+}
+
+.header-button{
+ float: right;
 }
 
 .logo {
@@ -248,6 +252,9 @@ audio {
         }
     
 }
+
+
+/*form css*/
 .legal{
 
     bottom: 0%;
@@ -255,3 +262,38 @@ audio {
     font-size: 10px;
     opacity: 0.7;
 }
+
+.wrapper{
+    background-color:#041C32;
+    display: flex;
+    height:100vh;
+    align-items: center;
+    flex-direction: column;  
+   
+}
+
+.input-group{
+    padding: 10px;
+}
+
+#login{
+    background-color: #04293A;
+}
+
+.logo{
+    padding: 20px;
+}
+
+.form{
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #064663;
+}
+
+.title{
+    padding-bottom: 15px;
+}
+
