@@ -25,6 +25,7 @@ function registerUser(event){
     if (validateEmail(email) && validatePassword(password)){
         alert("Ok")
         setCookie(username,password,365)
+        location.assign("login.html")
     }
 }
 
@@ -91,8 +92,8 @@ function registerLocal() {
 
 
 
-function checkLogin(passwordement){
-    clearBadge(passwordement)
+function checkLogin(element){
+    clearBadge(element)
     var users = window.localStorage.getItem("users")
     users=JSON.parse(users)
 
@@ -107,7 +108,7 @@ function checkLogin(passwordement){
         window.sessionStorage.setItem("user",user.username)
         return true
     } else {
-        addBadge("Username o Password errati",passwordement)
+        addBadge("Username o Password errati",element)
         return false
     }
 

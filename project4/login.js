@@ -17,6 +17,7 @@ function checkCookie(username,password) {
     let usernameCookie = getCookie(username);
     if (usernameCookie != "") {
      alert("Welcome again " + username);
+     location.assign("index.html");
     } else {
       
     }
