@@ -287,7 +287,7 @@ input{
 }
 
 .logo{
-    padding: 20px;
+    padding-bottom: 5px;
     /*filter to this color the image #EF8C57 https://stackoverflow.com/questions/7415872/change-color-of-png-image-via-css*/
     filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
 }
@@ -299,14 +299,23 @@ input{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px;
+    padding: 30px;
 }
 
 .title{
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .text-login{
     color: #04293A;
+}
+
+.signup-wrapper{
+    padding-top: 20px;
+}
+
+
+.text-error{
+     color:#FF5959;
 }
 
