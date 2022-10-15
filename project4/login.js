@@ -4,46 +4,49 @@ const btn=document.getElementById("login")
 
 btn.addEventListener('click',()=>{
 
-
-    const username=document.getElementById("userName").value
-    const password=document.getElementById("userPassword").value
-    console.log(username,password)
-    checkCookie(username,password)
-    
+  if  (checkLogin()){
+    window.location.assign("index.html")
+  }
 })
 
 
-function checkCookie(username,password) {
-    let usernameCookie = getCookie(username);
-    if (usernameCookie != "") {
-     alert("Welcome again " + username);
-     location.assign("index.html");
-    } else {
-      
-    }
+function checkLogin(){
+  //clearBadge(element)
+  var users = window.localStorage.getItem("users")
+  users=JSON.parse(users)
+
+  console.log(users)
+  var user = {
+      username:document.getElementById("userName").value,
+      password:document.getElementById("userPassword").value,
+  }
+  if (users.find(u=>u.username==user.username) && users.find(u=>u.password==user.password)) {
+      window.sessionStorage.setItem("user",user.username)
+      return true
+  } else {
+      alert("username o password errati")
+      return false
   }
 
-
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-  }
+
+
+
+
+function clearBadge(el){
+  var alert = document.getElementById("alert"+el);
+  var password=document.getElementById("user"+el)
+  password.style.border="2px solid #064663"
+  alert.textContent=""
+}
+
+function addBadge(text,el){
+  var alert = document.getElementById("alert"+el);
+  var password=document.getElementById("user"+el)
+  password.style.border="3px solid #FF5959"
+  alert.textContent=text
+}
+
+
 

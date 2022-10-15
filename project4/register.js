@@ -1,34 +1,14 @@
 
 
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
 
 
 
 const registerBtn=document.getElementById("register")
 
 registerBtn.addEventListener('click',(e)=>{
-    registerUser(e)
+    e.preventDefault()
+    registerLocal()
 })
-
-
-function registerUser(event){
-    event.preventDefault()
-    let username=document.getElementById("userName").value
-    let email=document.getElementById("userEmail").value
-    let password=document.getElementById("userPassword").value
-    if (validateEmail(email) && validatePassword(password)){
-        alert("Ok")
-        setCookie(username,password,365)
-        location.assign("login.html")
-    }
-}
-
 
 
 
@@ -46,13 +26,12 @@ function registerLocal() {
         users = JSON.parse(users)
     }    
 
-    //uso async e await per aspettare il codice asincrono
     var user = {
                 name:document.getElementById("name").value,
-                name:document.getElementById("name").value,
-                username: document.getElementById("username").value,
-                email: document.getElementById("email").value,
-                password: document.getElementById("password").value,
+                surname:document.getElementById("surname").value,
+                username: document.getElementById("userName").value,
+                email: document.getElementById("userEmail").value,
+                password: document.getElementById("userPassword").value,
         }    
         
     
@@ -88,30 +67,6 @@ function registerLocal() {
             
         
     
-}
-
-
-
-function checkLogin(element){
-    clearBadge(element)
-    var users = window.localStorage.getItem("users")
-    users=JSON.parse(users)
-
-    console.log(users)
-    var user = {
-        username:document.getElementById("username").value,
-        password:document.getElementById("password").value,
-    }
-    console.log(user)
-    if (users.find(u=>u.username==user.username) && users.find(u=>u.password==user.password)) {
-        //setto npasswordlo session storage l user appena loggato
-        window.sessionStorage.setItem("user",user.username)
-        return true
-    } else {
-        addBadge("Username o Password errati",element)
-        return false
-    }
-
 }
 
 
