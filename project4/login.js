@@ -1,14 +1,11 @@
 const btn=document.getElementById("login")
 
-
-
 btn.addEventListener('click',()=>{
 
   if  (checkLogin()){
     window.location.assign("index.html")
   }
 })
-
 
 function checkLogin(){
   //clearBadge(element)
@@ -29,9 +26,6 @@ function checkLogin(){
   }
 
 }
-
-
-
 
 
 function clearBadge(el){
