@@ -66,7 +66,11 @@ making borders, gaps and deciding how things looks*/
     border-radius: 10px;
     
 }
-
+.artist{
+    background-image: linear-gradient(to right, #041C32 , #064663);
+    overflow: auto;
+}
+/*buttons*/
 button {
     margin: 5px;  
     margin-top: 15px;
@@ -82,6 +86,34 @@ button {
 button:hover{
    opacity: 0.8;
 
+}
+.loginRegisterButton{
+    padding: 0px 5px;
+    align-content: center;
+    height: 25px;
+    align-self: center;
+    width: 100%;    
+}
+.facebookButton{
+    padding: 0px 5px;
+    height: 25px;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    background-color: #1977f3;
+    margin-top: 5px;
+}
+.googleButton{
+    padding: 0px 5px;
+    height: 25px;
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-width: 1.5px;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    margin-top: 5px;
 }
 
 .user-icon{
@@ -157,6 +189,10 @@ audio {
     text-align: center;
 }
 
+.songartistpage{
+margin-left: 10px;
+
+}
 /*responsiveness*/
         
 @media (max-width: 600px) {
@@ -370,31 +406,3 @@ textarea.input-big, input.input-big {
 }
 
 
-.loginRegisterButton{
-    padding: 0px 5px;
-    align-content: center;
-    height: 25px;
-    align-self: center;
-    width: 100%;    
-}
-.facebookButton{
-    padding: 0px 5px;
-    height: 25px;
-    align-content: center;
-    align-self: center;
-    width: 100%;
-    background-color: #1977f3;
-    margin-top: 5px;
-}
-.googleButton{
-    padding: 0px 5px;
-    height: 25px;
-    background-color: white;
-    color: black;
-    border-color: black;
-    border-width: 1.5px;
-    align-content: center;
-    align-self: center;
-    width: 100%;
-    margin-top: 5px;
-}
