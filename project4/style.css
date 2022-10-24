@@ -85,6 +85,10 @@ button:hover{
 
 }
 
+.user-icon{
+    padding: 40px 20px;
+}
+
 .header-button{
  float: right;
 }
@@ -280,7 +284,7 @@ audio {
 input{
     padding: 0 5px;
     height:25px;
-    border: 2px solid #064663;
+    border: 1.5px solid #064663;
     border-radius: 25px;
 }
 
@@ -318,5 +322,38 @@ input{
 
 .text-error{
      color:#FF5959;
+}
+
+.text-center{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.newPlaylist{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border:10px solid #064663;
+    border-radius: 25px;
+    align-items: center;
+    padding: 10px;
+}
+
+.margin-sm{
+    margin: 10px;
+}
+
+.input-big{
+    padding: 0 15px;
+    height:45px;
+    border: 2px solid #064663;
+    border-radius: 45px;
+
+}
+
+textarea.input-big, input.input-big {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: larger;
 }
 
