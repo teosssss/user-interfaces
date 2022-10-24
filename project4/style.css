@@ -325,19 +325,27 @@ input{
 }
 
 .text-center{
-    margin-top: 50px;
     text-align: center;
 }
 
-.newPlaylist{
+.wrapper-new-playlist{
+    grid-area: content;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: column;  
+}
+
+.new-playlist-box{
+    display: flex;
     border:10px solid #064663;
     border-radius: 25px;
+    padding: 25px;
+    flex-direction: column;
     align-items: center;
-    padding: 10px;
 }
+
+
+
 
 .margin-sm{
     margin: 10px;
