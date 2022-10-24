@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/96629882c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script for icons-->
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header">
+        <a href="index.html"
+          ><img src="../project4/assets/logo/logo.png" alt="logo" class="logo"
+        /></a>
+        <div class="header-button" id="p">
+          <a href="login.html"><button id="login">Log In</button></a>
+          <a href="register.html"><button id="register">Register</button></a>
+          <a href="#"><i class="user-icon fa fa-user-circle fa-2xl"></i></a>
+        </div>
+      </div>
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="search.html"
+              ><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Search</a
+            >
+          </li>
+          <li>
+            <a href="create.html"
+              ><i class="fa-sharp fa-solid fa-plus"></i> New Playlist</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-sharp fa-solid fa-bookmark"></i> Saved songs</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fa-sharp fa-solid fa-gear"></i> Settings</a>
+          </li>
+        </ul>
+      </div>
+      <div class="wrapper-grid">
+      <div class="new-playlist-box text-center">
+        <h1>Create a new Playlist</h1>
+        <form action="" class="">
+            <br>
+            <input id="name" class="input-big margin-sm" type="text" placeholder="Name" size="35" required> 
+            <br>
+            <textarea id="description" class="input-big margin-sm" style="padding-top: 10px;" placeholder="Description"></textarea>
+            <br>
+            <button type="submit" id="create">Create</button>
+            
+        </form>
+    </div>
+     </div>
+        
+    
+    <div class="footer">
+      <br />
+      <p>Sign up to the AudioCity today!</p>
+      <br />
+      <p class="songartist">© Secure Privacy 2022. All Rights Reserved.</p>
+      <a class="legal" href="#">Cookies and Legal</a>
+    </div>
+  
+  </body>
+  <script src="js/index.js"></script>
+  <script src="js/newPlaylist.js"></script>
+</html>

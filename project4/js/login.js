@@ -1,13 +1,16 @@
 const btn=document.getElementById("login")
 
-btn.addEventListener('click',()=>{
 
-  if  (checkLogin()){
-    window.location.assign("index.html")
+
+btn.addEventListener('click',  (e)=>{
+  e.preventDefault()
+  if  ( checkLogin()){
+    window.location.replace("index.html");
   }
 })
 
-function checkLogin(){
+
+async function checkLogin(){
   //clearBadge(element)
   var users = window.localStorage.getItem("users")
   users=JSON.parse(users)
@@ -26,6 +29,12 @@ function checkLogin(){
   }
 
 }
+
+
+
+
+
+
 
 
 function clearBadge(el){
