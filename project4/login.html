@@ -1,43 +1,99 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Login form with JavaScript Validation</title>
-<link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-
-<div class="wrapper">
-    <div class="logo">
-        <a href="../project4/index.html"><img src="../project4/assets/logo/logo.png" alt="logo" class="logo"/></a>
-    </div>
-    <div class="form">
-    
-  
-    <h1 class="title text-login">Login to your account</h1>
-    <form action="" id="formvalidate">
-      <div class="input-group">
-        <label class="palceholder text-login" for="userName">Username</label>
-        <br>
-        <input class="form-control text-login" size="25" name="userName" id="userName" type="text" placeholder="" />
-        
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login form with JavaScript Validation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v15.0"
+      nonce="HPTVYgtf"
+    ></script>
+    <div class="wrapper">
+      <div class="logo">
+        <a href="../project4/index.html"
+          ><img src="../project4/assets/logo/logo.png" alt="logo" class="logo"
+        /></a>
       </div>
-      <div class="input-group">
-        <label class="palceholder text-login"for="userPassword">Password</label>
-        <br>
-        <input class="form-control text-login"  size="25" name="userPassword" id="userPassword" type="password" placeholder="" />
+      <div class="form">
+        <h1 class="title text-login">Login to your account</h1>
+        <form action="" id="formvalidate">
+          <div class="input-group">
+            <label class="palceholder text-login" for="userName"
+              >Username</label
+            >
+            <br />
+            <input
+              class="form-control text-login"
+              size="25"
+              name="userName"
+              id="userName"
+              type="text"
+              placeholder=""
+            />
+          </div>
+          <div class="input-group">
+            <label class="palceholder text-login" for="userPassword"
+              >Password</label
+            >
+            <br />
+            <input
+              class="form-control text-login"
+              size="25"
+              name="userPassword"
+              id="userPassword"
+              type="password"
+              placeholder=""
+            />
+          </div>
+
+          <button class="loginRegisterButton" type="submit" id="login">
+            Login</button
+          ><br />
+        </form>
+        <script
+          src="https://accounts.google.com/gsi/client"
+          async
+          defer
+        ></script>
+        <div
+          id="g_id_onload"
+          data-client_id="YOUR_GOOGLE_CLIENT_ID"
+          data-login_uri="https://your.domain/your_login_endpoint"
+          data-auto_prompt="false"
+        ></div>
+        <div
+          class="g_id_signin"
+          data-type="standard"
+          data-size="medium"
+          data-theme="filled_blue"
+          data-text="sign_in_with"
+          data-shape="pill"
+          data-logo_alignment="left"
+        ></div>
+
+        <div
+          style="margin-top: 5px"
+          class="fb-login-button"
+          data-width="209.2"
+          data-size="medium"
+          data-button-type="login_with"
+          data-layout="rounded"
+          data-auto-logout-link="false"
+          data-use-continue-as="false"
+        ></div>
+        <div class="signup-wrapper text-center">
+          <a href="register.html" class="text-login"
+            >Don't have an account? Create One</a
+          >
+        </div>
       </div>
-
-      <button type="submit" id="login">Login</button><br>
-    </form>
-    <div class="signup-wrapper text-center ">
-        <a href="register.html" class="text-login">Don't have an account? Create One</span></a>
     </div>
-</div>
-  
-</div>
-
-</body>
-<script src="../project4/login.js"></script>
+  </body>
+  <script src="../project4/login.js"></script>
 </html>

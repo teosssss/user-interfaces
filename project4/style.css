@@ -81,7 +81,7 @@ button {
     }
 
 button:hover{
-    background-color: #04293A; 
+   opacity: 0.8;
 
 }
 
@@ -320,3 +320,8 @@ input{
      color:#FF5959;
 }
 
+.loginRegisterButton{
+    align-self: center;
+    float: right;
+    width: 209.2px;
+}
