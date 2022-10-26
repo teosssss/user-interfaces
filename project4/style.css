@@ -72,8 +72,6 @@ making borders, gaps and deciding how things looks*/
 }
 /*buttons*/
 button {
-    margin: 5px;  
-    margin-top: 15px;
     padding: 10px 20px;
     border-radius: 15px;
     border-width: 0px;
@@ -87,33 +85,23 @@ button:hover{
    opacity: 0.8;
 
 }
-.loginRegisterButton{
+.login-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0px 5px;
-    align-content: center;
-    height: 25px;
-    align-self: center;
+    margin-bottom:10px;
+    height: 40px;    
     width: 100%;    
 }
-.facebookButton{
-    padding: 0px 5px;
-    height: 25px;
-    align-content: center;
-    align-self: center;
-    width: 100%;
+.facebook{
     background-color: #1977f3;
-    margin-top: 5px;
 }
-.googleButton{
-    padding: 0px 5px;
-    height: 25px;
+.google{
     background-color: white;
     color: black;
     border-color: black;
     border-width: 1.5px;
-    align-content: center;
-    align-self: center;
-    width: 100%;
-    margin-top: 5px;
 }
 
 .user-icon{
@@ -305,19 +293,20 @@ margin-left: 10px;
 .wrapper{
     background-image: linear-gradient(to right, #041C32 , #064663);
     display: flex;
-    height:100vh;
+    min-height: 100vh;
+    height:auto;
     align-items: center;
     flex-direction: column;  
    
 }
 
 .input-group{
-    padding: 10px;
+    padding: 5px 0px;
 }
 
 input{
-    padding: 0 10px;
     height: 35px;
+    padding: 0px 10px;
     border: 2px solid #064663;
     border-radius: 25px;
     color: black ;
@@ -338,7 +327,7 @@ input{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    padding: 15px 30px;
 }
 
 .title{
@@ -376,6 +365,7 @@ input{
     padding: 25px;
     flex-direction: column;
     align-items: center;
+    background-image: linear-gradient(to bottom right ,#041C32 , #064663);
     box-shadow: 0 30px 60px rgba(0,0,0,.12), 0 30px 60px rgba(0,0,0,.06);
 }
 
@@ -394,7 +384,7 @@ input{
 
 }
 
-textarea.input-big, input.input-big {
+textarea.input-big{
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     font-size: larger;
