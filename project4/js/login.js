@@ -4,13 +4,13 @@ const btn=document.getElementById("login")
 
 btn.addEventListener('click',  (e)=>{
   e.preventDefault()
-  if  ( checkLogin()){
+  if  (checkLogin()){
     window.location.replace("index.html");
   }
 })
 
 
-async function checkLogin(){
+function checkLogin(){
   //clearBadge(element)
   var users = window.localStorage.getItem("users")
   users=JSON.parse(users)

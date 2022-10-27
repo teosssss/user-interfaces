@@ -37,8 +37,8 @@
        
         <div class="header-button">
             <form action="" class="search-bar">
-                <input type="text" size="25" placeholder="Search..." id="songs">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <input type="text" size="25" placeholder="Search..." id="song">
+                <button type="submit" id="search"><i class="fa fa-search"></i></button>
             </form>
           <a href="login.html"><button id="login">Log In</button></a>
           <a href="register.html"><button id="register">Register</button></a>
@@ -68,166 +68,22 @@
         </ul>
       </div>
       <div class="content">
-        <div class="songdiv">
+        <div class="songdiv" id="song1" style="display:none ;">
           <img
             class="songcover"
-            src="../project4/assets/images/song1.jpg"
-            alt="Album Cover"
+            alt=""
           />
-          <p class="songtitle">Sky Scrapers</p>
-          <p class="songartist">HoliznaCC0</p>
+          <p class="songtitle"></p>
+          <p class="songartist"></p>
           <audio controls>
             <source
-              src="../project4/assets/music/song1/HoliznaCC0 - Sky Scrapers.mp3"
               type="audio/mpeg"
+            
             />
             Your browser does not support the audio element.
           </audio>
         </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="../project4/assets/images/song2.jpg"
-            alt="Album Cover"
-          />
-          <p class="songtitle">Seasons Change</p>
-          <p class="songartist">HoliznaCC0</p>
-          <audio controls>
-            <source
-              src="../project4assets/music/song2/HoliznaCC0 - Seasons Change.mp3"
-              type="audio/mpeg"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="../project4/assets/images/song3.png"
-            alt="Album Cover"
-          />
-          <p class="songtitle">Riorr</p>
-          <p class="songartist">Audiorezout</p>
-          <audio controls>
-            <source
-              src="../project4assets/music/song3/Audiorezout - Riorr.mp3"
-              type="audio/mpeg"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="../project4/assets/images/song4.jpg"
-            alt="Album Cover"
-          />
-          <p class="songtitle">Reflection</p>
-          <p class="songartist">Makaih Beats</p>
-          <audio controls>
-            <source
-              src="../project4assets/music/song4/Makaih Beats - Reflection.mp3"
-              type="audio/mpeg"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="../project4/assets/images/song5.jpg"
-            alt="Album Cover"
-          />
-          <p class="songtitle">Sweet Love</p>
-          <p class="songartist">Maarten Schellekens</p>
-          <audio controls>
-            <source
-              src="../project4assets/music/song5/Maarten Schellekens - Sweet Love (Chill-Remix).mp3"
-              type="audio/mpeg"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="../project4/assets/images/song6.jpg"
-            alt="Album Cover"
-          />
-          <p class="songtitle">SUNSET</p>
-          <p class="songartist">Caslo</p>
-          <audio controls>
-            <source
-              src="../project4/assets/music/song6/Caslo - SUNSET.mp3"
-              type="audio/mpeg"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="../project4/assets/images/song7.jpg"
-            alt="Album Cover"
-          />
-          <p class="songtitle">Wicked</p>
-          <p class="songartist">Pierce Murphy</p>
-          <audio controls>
-            <source
-              src="../project4/assets/music/song7/Pierce Murphy - Wicked.mp3"
-              type="audio/mpeg"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="../project4/assets/images/song8.jpg"
-            alt="Album Cover"
-          />
-          <p class="songtitle">Permanent Damage</p>
-          <p class="songartist">Mikah Beats</p>
-          <audio controls>
-            <source
-              src="../project4/assets/music/song8/Makaih Beats - Permanent Damage.mp3"
-              type="audio/mpeg"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="../project4/assets/images/song9.jpg"
-            alt="Album Cover"
-          />
-          <p class="songtitle">Get Evil</p>
-          <p class="songartist">HoliznaCC0</p>
-          <audio controls>
-            <source
-              src="../project4/assets/music/song9/HoliznaCC0 - Get Evil.mp3"
-              type="audio/mpeg"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="../project4/assets/images/song10.jpg"
-            alt="Album Cover"
-          />
-          <p class="songtitle">Good Vibes</p>
-          <p class="songartist">HoliznaCC0</p>
-          <audio controls>
-            <source
-              src="../project4/assets/music/song10/HoliznaCC0 - Good Vibes.mp3"
-              type="audio/mpeg"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
+        
       </div>
       <div class="footer">
         <br />
@@ -239,5 +95,6 @@
     </div>
   </body>
   <script src="js/index.js"></script>
-  <script src="js/search.js"></script>
+  <script type="module" src="js/search.js"></script>
+  <script src="js/autocomplete.js"></script>
 </html>
