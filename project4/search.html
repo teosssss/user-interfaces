@@ -7,11 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music App</title>
     <link rel="stylesheet" href="style.css" />
+    <!--script autocomplete jquery-->
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <!--load jQuery UI  -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+    integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <!-- script for icons-->
     <script
       src="https://kit.fontawesome.com/96629882c6.js"
       crossorigin="anonymous"
     ></script>
-    <!-- script for icons-->
+  
+    
   </head>
   <body>
     <div class="grid-container">
@@ -22,7 +37,7 @@
        
         <div class="header-button">
             <form action="" class="search-bar">
-                <input type="text" size="25" placeholder="Search...">
+                <input type="text" size="25" placeholder="Search..." id="songs">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
           <a href="login.html"><button id="login">Log In</button></a>
@@ -224,4 +239,5 @@
     </div>
   </body>
   <script src="js/index.js"></script>
+  <script src="js/search.js"></script>
 </html>
