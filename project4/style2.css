@@ -1,5 +1,6 @@
 /*creating a container for a grid,
 making borders, gaps and deciding how things looks*/
+/*#242331, #2B2A3C, #333248*/
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +17,7 @@ making borders, gaps and deciding how things looks*/
       'header header' 
       'sidebar  content' 
       'sidebar footer';
-    background-color: #0C0D32;
+    background-color: #2B2A3C;
     
 
 }
@@ -27,25 +28,27 @@ making borders, gaps and deciding how things looks*/
     }
 
 .header{
-    background-color: #0C0D32;
+    background-color: #2B2A3C;
     grid-area: header;
    
 }
 
 .sidebar{
-    background-color: #171833;
+    background-color: #2B2A3C;
     grid-area: sidebar;
     display: flex;
 }
 .footer{
     grid-area: footer;
-    background-color: #0C0D32;
+    background-color: #2B2A3C;
     text-align: center;
     font-size: 20px;
+    border-width: 2px;
+    border-color: black;
 } 
 
 .content{
-    background-color: #0C0D32;
+    background-color: #333248;
     overflow: auto;
     grid-area: content;
     display: grid;
@@ -61,7 +64,7 @@ making borders, gaps and deciding how things looks*/
     background-size: cover;
     min-height: 175px;
     position: relative;
-    background-color: #171833;
+    background-color: #2B2A3C;
     border-radius: 10px;
     
 }
@@ -74,7 +77,7 @@ button {
     padding: 10px 20px;
     border-radius: 15px;
     border-width: 0px;
-    background-color: #04293A;
+    background-color: #333248;
     transition-duration: 0.2s;
     font-size: 14px;
     color: white;
@@ -284,7 +287,8 @@ margin-left: 10px;
 
 /*form css*/
 .legal{
-    bottom: 0%;
+    
+    align-self: baseline;
     font-size: 10px;
     opacity: 0.7;
 }
