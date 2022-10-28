@@ -392,9 +392,6 @@ textarea.input-big{
 }
 
 
-.search-bar{
-    display: inline-block;
-}
 
 /*autocomplete css*/
 .ui-autocomplete {
@@ -469,4 +466,57 @@ textarea.input-big{
     opacity: 0.9;
   }
 
+  /*dropdown playlist*/
+  .add-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
   
+
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+   .add-btn:hover {
+    background-color: #3e8e41;
+  }
+
+  .search-grid{
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr; 
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    
+  }
+
+  .search-grid>div{
+    padding-top: 15px;
+    padding-bottom: 45px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-size: cover;
+    min-height: 175px;
+    position: relative;
+    background-color: #041C32;
+    border-radius: 10px;
+}
+  
+  .search-bar{
+    display: inline-block;
+}
+
+
+select{
+    width: 250px;
+    height: 45px;
+    border-radius: 25px;
+    padding: 0 10px;
+    color: black;
+}
+
+option{
+    color: black;
+}

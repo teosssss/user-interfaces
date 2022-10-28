@@ -30,3 +30,22 @@ searchBtn.addEventListener("click",async (e)=>{
 
 
 })
+
+window.addEventListener("load",()=>{
+    var playlists=window.localStorage.getItem("playlists")
+    var user=window.sessionStorage.getItem("user")
+    if (user!=null){
+        playlists=JSON.parse(playlists)
+        var userPlaylists=playlists.find(p=>p.user==user)
+        var dropdown=document.getElementById("playlist-dropdown")
+        userPlaylists.playlists.forEach(playlist => {
+            var option=document.createElement("option")
+            option.value=playlist.name
+            option.textContent=playlist.name
+            dropdown.appendChild(option)
+        });
+    }
+    
+})
+
+
