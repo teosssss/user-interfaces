@@ -2,9 +2,11 @@ const registerBtn=document.getElementById("register")
 
 registerBtn.addEventListener('click',(e)=>{
     e.preventDefault()
-    registerLocal()
-})
+    if (validateEmail(document.getElementById("userEmail").value) && validatePassword((document.getElementById("userPassword").value)){
+        registerLocal()
 
+    }
+})
  
 
 
@@ -27,10 +29,10 @@ function registerLocal() {
         
     
         if (users.find(u=>u.email==user.email)){
-            addBadge("email gia esistente","email")
+            addBadge("email already exist","Email")
             
         } else if (users.find(u=> u.username==user.username)){
-            addBadge("username gia esistente","username")
+            addBadge("username already exist","Name")
             
         } else {
             users.push(user)
@@ -69,7 +71,7 @@ function clearBadge(el){
 function addBadge(text,el){
     var alert = document.getElementById("alert"+el);
     var password=document.getElementById("user"+el)
-   // password.style.border="3px solid #FF5959"
+    password.style.border="3px solid #FF5959"
     alert.textContent=text
 }
 
