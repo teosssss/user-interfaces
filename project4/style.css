@@ -451,5 +451,22 @@ textarea.input-big{
     width: 1px;
   }
 
-  
+  /*///////////////USER PAGE/////////////////*/
+
+  .userPicture{
+    height: 100px;
+    border-radius: 50px;
+    margin: 10px;
+  }
+  .userName{
+    font-size: 90px;
+    font-style: normal;
+    position: relative;
+    bottom: 25px;
+  }
+  .userText{
+    font-size: 30px;
+    opacity: 0.9;
+  }
+
   
