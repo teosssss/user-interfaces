@@ -2,9 +2,8 @@ const registerBtn=document.getElementById("register")
 
 registerBtn.addEventListener('click',(e)=>{
     e.preventDefault()
-    if (validateEmail(document.getElementById("userEmail").value) && validatePassword((document.getElementById("userPassword").value)){
+    if (validateEmail(document.getElementById("userEmail").value) && validatePassword((document.getElementById("userPassword").value))){
         registerLocal()
-
     }
 })
  
@@ -98,22 +97,22 @@ function validatePassword(password){
     let re1=/^(.*[A-Z].*)$/;
 
     if (!re1.test(password) ){
-        addBadge("la pw deve avere 1 carattere maiuscolo","Password")
+        addBadge("pw needs a lower case charachter","Password")
         return false
     } 
     let re2=/^.{8,}$/;
     if (!re2.test(password)){
-        addBadge("la pw deve essere lunga almeno 8 caratteri","Password")
+        addBadge("pw too short","Password")
         return false
     } 
     let re3=/^(.*[0-9].*)$/;
     if (!re3.test(password)){
-        addBadge("la pw deve contenere almeno un numero","Password")
+        addBadge("pw needs a number","Password")
         return false
     }
     let re4=/^(.*[a-z].*)$/;
     if (!re4.test(String(password))){
-        addBadge("la pw deve contenere almeno una minuscola","Password")
+        addBadge("pw needs a lower case charachter","Password")
         return false
     }
 
