@@ -520,3 +520,21 @@ select{
 option{
     color: black;
 }
+
+.add-song-box{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+}
+
+.custom-select{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    
+}
+
+.custom-select>select{
+    width: 200px;
+}

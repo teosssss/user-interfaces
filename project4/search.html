@@ -67,8 +67,8 @@
           </li>
         </ul>
       </div>
-      <div class="search-grid">
-        <div class="songdiv" id="song1" style="display:none ;">
+      <div class="search-grid" style="display:none ;">
+        <div class="songdiv" id="song1" >
           <img
             class="songcover"
             alt=""
@@ -83,14 +83,15 @@
             Your browser does not support the audio element.
           </audio>
         </div>
-        <div class="add-song">
+        <div class="add-song-box">
         <h2 class="text-center">Add to playlist</h2>
-        <div class="custom-select" style="width:200px;">
+        <div class="custom-select">
           <select id="playlist-dropdown">
             <option value="defaul">Select playlist:</option>
           </select>
+        <button class="add-btn" id="Q">Add</button>
+
         </div>
-        <button class="add-btn">Dropdown</button>
         </div>
       </div>
       <div class="footer">
@@ -105,4 +106,5 @@
   <script src="js/index.js"></script>
   <script type="module" src="js/search.js"></script>
   <script src="js/autocomplete.js"></script>
+  
 </html>
