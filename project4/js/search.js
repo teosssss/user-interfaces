@@ -51,6 +51,13 @@ window.addEventListener("load",()=>{
 const addBtn=document.querySelector(".add-btn")
 
 addBtn.addEventListener("click",()=>{
+    //check if user is logged
+    var userLogged=window.sessionStorage.getItem("user")
+    if (userLogged==null){
+        alert("login")
+        return
+    }
+    
     var selectValue=document.getElementById("playlist-dropdown").value
     var songName=document.querySelector(".songtitle").textContent
     //check  if is selected a valid playlist
