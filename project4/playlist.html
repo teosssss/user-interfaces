@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music App</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/logo/logo-square.png" />
     <script
       src="https://kit.fontawesome.com/96629882c6.js"
       crossorigin="anonymous"
@@ -18,10 +19,12 @@
         <a href="index.html"
           ><img src="../project4/assets/logo/logo.png" alt="logo" class="logo"
         /></a>
-        <div class="header-button" id="p">
+        <div class="header-button">
           <a href="login.html"><button id="login">Log In</button></a>
           <a href="register.html"><button id="register">Register</button></a>
-          <a href="#"><i class="user-icon fa fa-user-circle fa-2xl"></i></a>
+          <a href="user.html"
+            ><i class="user-icon fa fa-user-circle fa-2xl"></i
+          ></a>
         </div>
       </div>
       <div class="sidebar">
@@ -47,31 +50,20 @@
           <hr class="solid">
         </ul>
       </div>
-      <div class="wrapper-grid">
-      <div class="new-playlist-box text-center">
-        <h1>Create a new Playlist</h1>
-        <form action="" class="">
-            <br>
-            <input id="name" class="input-big margin-sm" type="text" placeholder="Name" size="35" required> 
-            <br>
-            <textarea id="description" class="input-big margin-sm" style="padding-top: 10px;" placeholder="Description"></textarea>
-            <br>
-            <button type="submit" id="create">Create</button>
-            
-        </form>
+      <div class="playlist-box">
+        <h2>PLAYLIST</h2>
+        <h1 class="playlist-name"></h1>
+        <ul id="playlist-song"></ul>
+      </div>
+      <div class="footer">
+        <br />
+        <p>Sign up to the AudioCity today!</p>
+        <br />
+        <p class="songartist">© Secure Privacy 2022. All Rights Reserved.</p>
+        <a class="legal" href="#">Cookies and Legal</a>
+      </div>
     </div>
-     </div>
-        
-    
-    <div class="footer">
-      <br />
-      <p>Sign up to the AudioCity today!</p>
-      <br />
-      <p class="songartist">© Secure Privacy 2022. All Rights Reserved.</p>
-      <a class="legal" href="#">Cookies and Legal</a>
-    </div>
-  
   </body>
   <script src="../project4/js/index.js"></script>
-  <script src="../project4/js/newPlaylist.js"></script>
+  <script src="../project4/js/playlist.js"></script>
 </html>

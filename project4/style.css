@@ -538,3 +538,14 @@ option{
 .custom-select>select{
     width: 200px;
 }
+
+/*playlist*/
+.playlist-name{
+    font-size: 150px;
+}
+
+.playlist-box{
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+}
