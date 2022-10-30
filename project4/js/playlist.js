@@ -18,11 +18,20 @@ window.addEventListener("load",()=>{
         var songEl=document.createElement("li")
         var divider=document.createElement("hr")
         songEl.classList.add("song-element")
+        var songDiv=document.createElement("div")
+        songDiv.classList.add("inline")
+        var playIcon=document.createElement("i")
+        playIcon.classList.add("playIcon")
         var songText=document.createElement("p")
+        playIcon.classList.add("fa")
+        playIcon.classList.add("fa-play")
         songText.textContent=song
         songList.appendChild(songEl)
         songList.appendChild(divider)
-        songEl.appendChild(songText)
+        songEl.appendChild(songDiv)
+        songDiv.appendChild(playIcon)
+        songDiv.appendChild(songText)
+        
     });
 
     
