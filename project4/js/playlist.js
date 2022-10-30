@@ -16,8 +16,13 @@ window.addEventListener("load",()=>{
 
     playlist.songs.forEach(song => {
         var songEl=document.createElement("li")
-        songEl.textContent=song
+        var divider=document.createElement("hr")
+        songEl.classList.add("song-element")
+        var songText=document.createElement("p")
+        songText.textContent=song
         songList.appendChild(songEl)
+        songList.appendChild(divider)
+        songEl.appendChild(songText)
     });
 
     

@@ -9,7 +9,8 @@ making borders, gaps and deciding how things looks*/
 }
 .grid-container {
     display: grid;
-    height: 100vh;
+    min-width: fit-content;
+    min-height: 100vh;
     grid-template-columns: 0.21fr 0.8fr;
     grid-template-rows: 0.4fr 3fr 0.4fr;
     grid-gap: 5px;
@@ -186,7 +187,7 @@ margin-left: 10px;
         
 @media (max-width: 600px) {
     .grid-container  {
-    grid-template-rows: 0.5fr 1fr 2fr 0.5fr;
+    grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr;
     grid-template-areas: 
     'header'
@@ -194,6 +195,8 @@ margin-left: 10px;
     'content'
     'footer';
     }
+
+    
     
     .content {
         display: grid;
@@ -218,7 +221,7 @@ margin-left: 10px;
 }
 @media (min-width:600px) and (max-width: 768px ) {
     .grid-container  {
-        grid-template-rows: 0.5fr 1fr 2fr 0.5fr;
+        grid-template-rows:auto auto auto auto;
         grid-template-columns: 1fr;
         grid-template-areas: 
         'header'
@@ -251,7 +254,7 @@ margin-left: 10px;
 
 @media (min-width:768px) and (max-width: 1200px ) {
     .grid-container  {
-        grid-template-rows: 0.5fr 1fr 2fr 0.5fr;
+        grid-template-rows: auto auto auto auto;
         grid-template-columns: 1fr;
         grid-template-areas: 
         'header'
@@ -352,7 +355,7 @@ input{
     text-align: center;
 }
 
-.wrapper-grid{
+.wrapper-box{
     grid-area: content;
     display: flex;
     align-items: center;
@@ -362,7 +365,7 @@ input{
 .new-playlist-box{
     display: flex;
     border-radius: 25px;
-    padding: 25px;
+    padding: 25px ;
     flex-direction: column;
     align-items: center;
     background-color: #041C32 ;
@@ -455,7 +458,8 @@ textarea.input-big{
     margin: 10px;
   }
   .userName{
-    font-size: 90px;
+    display: inline;
+    font-size : clamp(4rem, 10vw, 6rem);
     font-style: normal;
     position: relative;
     bottom: 25px;
@@ -485,17 +489,14 @@ textarea.input-big{
   .search-grid{
     grid-area: content;
     display: grid;
-    grid-template-columns: 0.8fr 1fr; 
+    grid-template-columns: auto; 
     grid-template-rows: auto;
     grid-gap: 10px;
     
   }
 
   .search-grid>div{
-    padding-top: 15px;
-    padding-bottom: 45px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding: 20px;
     background-size: cover;
     min-height: 175px;
     position: relative;
@@ -540,11 +541,20 @@ option{
 
 /*playlist*/
 .playlist-name{
-    font-size: 150px;
+    font-size : clamp(4rem, 10vw, 10rem);
 }
 
 .playlist-box{
     grid-area: content;
     display: flex;
     flex-direction: column;
+}
+
+.song-element{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.song-element:hover{
+    background-color: #064663
 }

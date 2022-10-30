@@ -23,4 +23,4 @@ userPlaylists.playlists.forEach(playlist => {
 });
 
 var userEmail=document.querySelector(".userEmail")
-userEmail.textContent=user.email
+userEmail.textContent="Email: "+user.email

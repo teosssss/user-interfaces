@@ -14,13 +14,22 @@
   </head>
   <body>
     <div class="grid-container">
-      <div class="header">
-        <a href="index.html"
-          ><img src="../project4/assets/logo/logo.png" alt="logo" class="logo"
-        /></a>
-      </div>
+      
+        <div class="header">
+          <a href="index.html"
+            ><img src="../project4/assets/logo/logo.png" alt="logo" class="logo"
+          /></a>
+          <div class="header-button">
+            <a href="login.html"><button id="login">Log In</button></a>
+            <a href="register.html"><button id="register">Register</button></a>
+            <a href="user.html"
+              ><i class="user-icon fa fa-user-circle fa-2xl"></i
+            ></a>
+          </div>
+        </div>
+      
       <div class="sidebar">
-        <ul>
+        <ul id="sidebar-list">
           <li>
             <a href="search.html"
               ><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Search</a
@@ -39,6 +48,7 @@
           <li>
             <a href="#"><i class="fa-sharp fa-solid fa-gear"></i> Settings</a>
           </li>
+          <hr>
         </ul>
       </div>
       <div class="artist">
@@ -47,11 +57,12 @@
           src="../project4/assets/images/profile-picture.jpg"
           alt=""
         />
-        <i class="userName" id="userName">Username</i><br />
+        <h1 class="userName" id="userName">Username</h1><br />
         <div class="userEmail"></div>
+        <br>
         <div class="userPlaylist">
-        <p class="userText">
-          Your playlists  
+        <p>
+          Your playlists:  
         </p>
         </div>
         
@@ -68,4 +79,5 @@
   </body>
 
   <script src="js/user.js"></script>
+  <script src="../project4/js/index.js"></script>
 </html>
