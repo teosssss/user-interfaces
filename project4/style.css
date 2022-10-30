@@ -361,12 +361,11 @@ input{
 
 .new-playlist-box{
     display: flex;
-    border:10px solid #064663;
     border-radius: 25px;
     padding: 25px;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(to bottom right ,#041C32 , #064663);
+    background-color: #041C32 ;
     box-shadow: 0 30px 60px rgba(0,0,0,.12), 0 30px 60px rgba(0,0,0,.06);
 }
 
