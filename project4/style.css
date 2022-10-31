@@ -142,7 +142,6 @@ li a:hover {
 audio {
     max-width: 90%;
     object-fit: contain;
-    display: none;
 }
 .songcover{
     text-align: center;
@@ -574,5 +573,29 @@ option{
 
 .playIcon:hover{
     font-size:1.5em;
-  transition: 0.2s ease-out
+    transition: 0.2s ease-out
 }
+
+/*audio control footbar*/
+.audio-container {
+
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #1977f3;
+    
+}
+
+.audio-bar-img{
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.image-box{
+    display: inline-flex;
+    align-items: center;
+    column-gap: 25px;
+}
+

@@ -23,6 +23,7 @@ window.addEventListener("load",()=>{
         var playIcon=document.createElement("i")
         playIcon.classList.add("playIcon")
         var songText=document.createElement("p")
+        songText.classList.add("songtitle")
         playIcon.classList.add("fa")
         playIcon.classList.add("fa-play")
         songText.textContent=song
@@ -36,3 +37,4 @@ window.addEventListener("load",()=>{
 
     
 })
+

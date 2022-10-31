@@ -67,8 +67,30 @@
         <p class="songartist">© Secure Privacy 2022. All Rights Reserved.</p>
         <a class="legal" href="#">Cookies and Legal</a>
       </div>
+      <div class="audio-container" id="container" style="display: none;">
+        <div class="image-box">
+        <img
+        class="audio-bar-img"
+        src=""
+        alt="Album Cover"
+      />
+      <div class="">
+      <p class="songtitle"></p>
+      <p class="songartist"></p>
+      </div>
+      </div>
+        <audio controls>
+          <source
+            src=""
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+        <div style="padding: 10px 60px;"></div>
+    </div>
     </div>
   </body>
   <script src="../project4/js/index.js"></script>
-  <script src="../project4/js/playlist.js"></script>
+  <script src="../project4/js/playlist.js" ></script>
+  <script src="../project4/js/audio.js" type="module"></script>
 </html>
