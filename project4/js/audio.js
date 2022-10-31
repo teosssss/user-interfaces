@@ -41,6 +41,7 @@ function loadSong() {
             source.src=song.path 
             //load the new audio
             audio.load()
+            audio.play()
             //set title and author
             title.textContent=song.song
             artist.textContent=song.author
