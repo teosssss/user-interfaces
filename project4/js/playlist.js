@@ -24,8 +24,10 @@ window.addEventListener("load",()=>{
         playIcon.classList.add("playIcon")
         var songText=document.createElement("p")
         songText.classList.add("songtitle")
-        playIcon.classList.add("fa")
-        playIcon.classList.add("fa-play")
+        playIcon.classList.add("fa-regular")
+        playIcon.classList.add("fa-circle-play")
+        playIcon.classList.add("fa-xl")
+
         songText.textContent=song
         songList.appendChild(songEl)
         songList.appendChild(divider)

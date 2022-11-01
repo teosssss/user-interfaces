@@ -16,15 +16,15 @@ if (document.readyState == 'complete') {
 }
 
 function loadSong() {
+    var playIcon=document.querySelectorAll(".playIcon")
 
-    const songLi=document.querySelectorAll(".song-element")
 
-    songLi.forEach(el => {
-        var playIcon=el.querySelector(".playIcon")
-        var searchedSong=el.querySelector(".songtitle")
+    playIcon.forEach(el => {
+        var searchedSong=el.nextElementSibling;
 
-        playIcon.addEventListener("click",()=>{
-            var song=myJson.find(s=>s.song==searchedSong.textContent)
+
+        el.addEventListener("click",()=>{
+            var song=myJson.find(s=>s.song==searchedSong.textContent.toLowerCase())
     
             var audioContainer=document.getElementById("container")
             if (audioContainer.style.display=="none"){

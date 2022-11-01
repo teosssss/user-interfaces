@@ -74,15 +74,10 @@
             class="songcover"
             alt=""
           />
+          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle"></p>
           <p class="songartist"></p>
-          <audio controls>
-            <source
-              type="audio/mpeg"
-            
-            />
-            Your browser does not support the audio element.
-          </audio>
+          
         </div>
         <div class="add-song-box">
         <h2 class="text-center">Add to playlist</h2>
@@ -103,9 +98,31 @@
         <a class="legal" href="#">Cookies and Legal</a>
       </div>
     </div>
+    <div class="audio-container" id="container" style="display: none;">
+      <div class="image-box">
+      <img
+      class="audio-bar-img"
+      src=""
+      alt="Album Cover"
+    />
+    <div class="">
+    <p class="songtitle"></p>
+    <p class="songartist"></p>
+    </div>
+    </div>
+      <audio controls>
+        <source
+          src=""
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
+      <div style="padding: 10px 60px;"></div>
+  </div>
   </body>
   <script src="js/index.js"></script>
   <script type="module" src="js/search.js"></script>
   <script src="js/autocomplete.js"></script>
+  <script src="../project4/js/audio.js" type="module"></script>
   
 </html>

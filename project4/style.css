@@ -35,7 +35,7 @@ making borders, gaps and deciding how things looks*/
 }
 
 .sidebar{
-    background-image: linear-gradient(to bottom right, #041C32 , #1278B9);
+    background-image: linear-gradient(to bottom , #041C32 , #1278B9);
     grid-area: sidebar;
     display: flex;
 }
@@ -110,6 +110,8 @@ button:hover{
     padding: 40px 20px;
 }
 
+
+
 .header-button{
  float: right;
 }
@@ -159,15 +161,28 @@ audio {
     max-height: 200px;
     transition-duration: 0.3s;
     text-align: center;
+    position: relative;
 }
-.songdiv:hover audio{
+/*.songdiv:hover {
     transition-duration: 0.3s;
     display: inline;
     position: relative;
-    bottom: 50px;
-    margin: -50px;
+    bottom: 20px;
+    margin: -20px;
+}*/
+.songdiv>i{
+    position: absolute;
+    bottom: 18px;
+    right: -5px;
+    margin-bottom: 2px;
+   
+}
+.songdiv>i:hover{
+    transition-duration: 0.3s;
+    bottom:28px
 }
 .songtitle{
+    
     font-size: 16px;
     color: white;
     text-align: center;
@@ -572,7 +587,7 @@ option{
 }
 
 .playIcon:hover{
-    font-size:1.5em;
+    font-size:2em;
     transition: 0.2s ease-out
 }
 

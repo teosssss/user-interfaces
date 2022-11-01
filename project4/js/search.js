@@ -14,16 +14,11 @@ searchBtn.addEventListener("click",async (e)=>{
     searchGrid.style.display="grid"
   }
   var image=searchGrid.querySelector(".songcover")
-  var audio=searchGrid.querySelector("audio")
-  var source=searchGrid.querySelector("source")
   var title=searchGrid.querySelector(".songtitle")
   var artist=searchGrid.querySelector(".songartist")
 
   //set the new image and audio path
   image.src="../project4/assets/images/"+song.song.replace(/ /g,'')+".jpg"
-  source.src=song.path 
-  //load the new audio
-  audio.load()
   //set title and author
   title.textContent=song.song
   artist.textContent=song.author
