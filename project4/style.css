@@ -35,7 +35,7 @@ making borders, gaps and deciding how things looks*/
 }
 
 .sidebar{
-    background-image: linear-gradient(to bottom , #041C32 , #1278B9);
+    background-color: #041C32;
     grid-area: sidebar;
     display: flex;
 }
@@ -172,14 +172,14 @@ audio {
 }*/
 .songdiv>i{
     position: absolute;
-    bottom: 18px;
-    right: -5px;
+    bottom: 22px;
+    right: -6px;
     margin-bottom: 2px;
    
 }
 .songdiv>i:hover{
     transition-duration: 0.3s;
-    bottom:28px
+    bottom:32px
 }
 .songtitle{
     
