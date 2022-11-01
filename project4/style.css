@@ -611,7 +611,12 @@ option{
 
 .image-box{
     display: inline-flex;
+    width: 30%;
     align-items: center;
     column-gap: 25px;
+}
+
+.audio-container>audio{
+    width: 30%;
 }
 
