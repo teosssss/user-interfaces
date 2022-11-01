@@ -594,6 +594,7 @@ option{
 /*audio control footbar*/
 .audio-container {
     padding: 26px;
+    box-shadow: 0 30px 60px rgba(0,0,0,.12), 0 30px 60px rgba(0,0,0,.06);
 
     align-items: center;
     justify-content: space-between;
