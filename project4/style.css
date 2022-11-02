@@ -71,69 +71,8 @@ making borders, gaps and deciding how things looks*/
     overflow: auto;
     grid-area: content;
 }
-.artist{
-    background-image: linear-gradient(to right, #041C32 , #147BD1);
-    overflow: auto;
-    grid-area: content;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-    'songartistpage songartistpage songartistpage songartistpage'
-    'song1 song2 song3 song4'
-    'comingsoon comingsoon comingsoon comingsoon'
-}
-.songdiv1{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 4px;
-    padding-right: 4px;
-    background-size: cover;
-    min-height: 200px;
-    max-height: 220px;
-    position: relative;
-    background-color: #041C32;
-    border-radius: 10px;
-    grid-area: song1;
-    width: 180px;
-}
-.songdiv2{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 4px;
-    padding-right: 4px;
-    background-size: cover;
-    min-height: 175px;
-    position: relative;
-    background-color: #041C32;
-    border-radius: 10px;
-    grid-area: song2;
-}
-.songdiv3{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 4px;
-    padding-right: 4px;
-    background-size: cover;
-    min-height: 175px;
-    position: relative;
-    background-color: #041C32;
-    border-radius: 10px;
-    grid-area: song3;
-}
-.songdiv4{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 4px;
-    padding-right: 4px;
-    background-size: cover;
-    min-height: 175px;
-    position: relative;
-    background-color: #041C32;
-    border-radius: 10px;
-    grid-area: song4;
-}
+
+
 /*buttons*/
 button {
     padding: 10px 20px;
@@ -255,6 +194,7 @@ audio {
     font-size: 10px;
     color: rgba(255, 255, 255, 0.662);
     text-align: center;
+    text-decoration: none;
 }
 
 .songartistpage{
