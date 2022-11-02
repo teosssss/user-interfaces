@@ -4,14 +4,14 @@ window.addEventListener("load",()=>{
         document.getElementById("login").style.display="none"
         document.getElementById("register").style.display="none"
         displayPlaylist()
+        document.getElementById("ad").innerText="Thank you for using AudioCity!"
     } 
+    else {
 
-    
-
-
-
-
+        document.getElementById("userPhoto").style.display="none"
+    }
 })
+
 
 
 function isLogged() {
