@@ -18,7 +18,6 @@ making borders, gaps and deciding how things looks*/
       'header header' 
       'sidebar  content' 
       'footer footer';
-    
     background-image: linear-gradient(to right, #041C32 , #1278B9);
 
 }
@@ -67,9 +66,73 @@ making borders, gaps and deciding how things looks*/
     border-radius: 10px;
     
 }
+.userPage{
+    background-image: linear-gradient(to right, #041C32 , #147BD1);
+    overflow: auto;
+    grid-area: content;
+}
 .artist{
     background-image: linear-gradient(to right, #041C32 , #147BD1);
     overflow: auto;
+    grid-area: content;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    'songartistpage songartistpage songartistpage songartistpage'
+    'song1 song2 song3 song4'
+    'comingsoon comingsoon comingsoon comingsoon'
+}
+.songdiv1{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-size: cover;
+    min-height: 200px;
+    max-height: 220px;
+    position: relative;
+    background-color: #041C32;
+    border-radius: 10px;
+    grid-area: song1;
+    width: 180px;
+}
+.songdiv2{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-size: cover;
+    min-height: 175px;
+    position: relative;
+    background-color: #041C32;
+    border-radius: 10px;
+    grid-area: song2;
+}
+.songdiv3{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-size: cover;
+    min-height: 175px;
+    position: relative;
+    background-color: #041C32;
+    border-radius: 10px;
+    grid-area: song3;
+}
+.songdiv4{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-size: cover;
+    min-height: 175px;
+    position: relative;
+    background-color: #041C32;
+    border-radius: 10px;
+    grid-area: song4;
 }
 /*buttons*/
 button {
@@ -146,6 +209,7 @@ audio {
     object-fit: contain;
 }
 .songcover{
+    align-self: center;
     text-align: center;
     max-width: 170px;
     max-height: 170px;
@@ -195,7 +259,6 @@ audio {
 
 .songartistpage{
 margin-left: 10px;
-
 }
 /*responsiveness*/
         
@@ -619,5 +682,10 @@ option{
 
 .audio-container>audio{
     width: 30%;
+}
+
+.counter{
+text-align: center;
+font-size: 30px;
 }
 
