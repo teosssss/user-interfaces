@@ -21,7 +21,9 @@
         <div class="header-button">
           <a href="login.html"><button id="login">Log In</button></a>
           <a href="register.html"><button id="register">Register</button></a>
-          <a href="#"><i class="user-icon fa fa-user-circle fa-2xl"></i></a>
+          <a href="user.html"
+            ><i class="user-icon fa fa-user-circle fa-2xl"></i
+          ></a>
         </div>
       </div>
       <div class="sidebar">
@@ -46,10 +48,57 @@
           </li>
         </ul>
       </div>
-      <div class="artist">
-        <h1 class="songartistpage">HoliznaCC0</h1>
+      <div class="content">
+        <div style="background: none" ; class="songartistpage">
+          <h1>HoliznaCC0</h1>
+          <br />
+          <h2>Recent releases</h2>
+        </div>
+
+        <div class="songdiv">
+          <img
+            class="songcover"
+            src="assets/images/skyscrapers.jpg"
+            alt="Album Cover"
+          />
+          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
+          <p class="songtitle">Sky Scrapers</p>
+          <p class="songartist">HoliznaCC0</p>
+        </div>
+        <div class="songdiv">
+          <img
+            class="songcover"
+            src="assets/images/seasonschange.jpg"
+            alt="Album Cover"
+          />
+          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
+          <p class="songtitle">Seasons Change</p>
+          <p class="songartist">HoliznaCC0</p>
+        </div>
+        <div class="songdiv">
+          <img
+            class="songcover"
+            src="assets/images/getevil.jpg"
+            alt="Album Cover"
+          />
+          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
+          <p class="songtitle">Get Evil</p>
+          <p class="songartist">HoliznaCC0</p>
+        </div>
+        <div class="songdiv">
+          <img
+            class="songcover"
+            src="assets/images/goodvibes.jpg"
+            alt="Album Cover"
+          />
+          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
+          <p class="songtitle">Good Vibes</p>
+          <p class="songartist">HoliznaCC0</p>
+        </div>
+
+        <h2 class="songartistpage">New release:</h2>
         <br />
-        <h2>Recent releases</h2>
+        <p class="counter" id="counter"></p>
       </div>
 
       <div class="footer">
@@ -62,4 +111,5 @@
     </div>
   </body>
   <script src="js/index.js"></script>
+  <script src="js/audio.js"></script>
 </html>

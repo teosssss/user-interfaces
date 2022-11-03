@@ -22,7 +22,7 @@
         <div class="header-button">
           <a href="login.html"><button id="login">Log In</button></a>
           <a href="register.html"><button id="register">Register</button></a>
-          <a href="user.html"
+          <a id="userPhoto" href="user.html"
             ><i class="user-icon fa fa-user-circle fa-2xl"></i
           ></a>
         </div>
@@ -31,23 +31,28 @@
         <ul id="sidebar-list">
           <li>
             <a href="search.html"
-              ><i class="fa-sharp playIcon fa-solid fa-magnifying-glass"></i> Search</a
+              ><i class="fa-sharp playIcon fa-solid fa-magnifying-glass"></i>
+              Search</a
             >
           </li>
           <li>
             <a href="create.html"
-              ><i class="fa-sharp playIcon fa-solid fa-plus"></i> New Playlist</a
+              ><i class="fa-sharp playIcon fa-solid fa-plus"></i> New
+              Playlist</a
             >
           </li>
           <li>
             <a href="#"
-              ><i class="fa-sharp playIcon fa-solid fa-bookmark"></i> Saved songs</a
+              ><i class="fa-sharp playIcon fa-solid fa-bookmark"></i> Saved
+              songs</a
             >
           </li>
           <li>
-            <a href="#"><i class="fa-sharp playIcon fa-solid fa-gear"></i> Settings</a>
+            <a href="#"
+              ><i class="fa-sharp playIcon fa-solid fa-gear"></i> Settings</a
+            >
           </li>
-          <hr class="solid"> 
+          <hr class="solid" />
         </ul>
       </div>
       <div class="content">
@@ -70,7 +75,6 @@
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Seasons Change</p>
           <p class="songartist">HoliznaCC0</p>
-
         </div>
         <div class="songdiv">
           <img
@@ -81,7 +85,6 @@
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Riorr</p>
           <p class="songartist">Audiorezout</p>
-          
         </div>
         <div class="songdiv">
           <img
@@ -92,7 +95,6 @@
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Reflection</p>
           <p class="songartist">Makaih Beats</p>
-          
         </div>
         <div class="songdiv">
           <img
@@ -103,7 +105,6 @@
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Sweet Love</p>
           <p class="songartist">Maarten Schellekens</p>
-          
         </div>
         <div class="songdiv">
           <img
@@ -114,7 +115,6 @@
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">SUNSET</p>
           <p class="songartist">Caslo</p>
-          
         </div>
         <div class="songdiv">
           <img
@@ -125,7 +125,6 @@
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Wicked</p>
           <p class="songartist">Pierce Murphy</p>
-          
         </div>
         <div class="songdiv">
           <img
@@ -136,7 +135,6 @@
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Permanent Damage</p>
           <p class="songartist">Mikah Beats</p>
-          
         </div>
         <div class="songdiv">
           <img
@@ -147,7 +145,6 @@
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Get Evil</p>
           <p class="songartist">HoliznaCC0</p>
-          
         </div>
         <div class="songdiv">
           <img
@@ -158,38 +155,30 @@
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Good Vibes</p>
           <p class="songartist">HoliznaCC0</p>
-          
         </div>
       </div>
       <div class="footer">
         <br />
-        <p>Sign up to the AudioCity today!</p>
+        <p id="ad">Sign up to the AudioCity today!</p>
         <br />
         <p class="songartist">© Secure Privacy 2022. All Rights Reserved.</p>
         <a class="legal" href="#">Cookies and Legal</a>
       </div>
     </div>
-    <div class="audio-container" id="container" style="display: none;">
+    <div class="audio-container" id="container" style="display: none">
       <div class="image-box">
-      <img
-      class="audio-bar-img"
-      src=""
-      alt="Album Cover"
-    />
-    <div class="">
-    <p class="songtitle"></p>
-    <p class="songartist"></p>
-    </div>
-    </div>
+        <img class="audio-bar-img" src="" alt="Album Cover" />
+        <div class="">
+          <p class="songtitle"></p>
+          <p class="songartist"></p>
+        </div>
+      </div>
       <audio controls>
-        <source
-          src=""
-          type="audio/mpeg"
-        />
+        <source src="" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
-      <div style="width: 30%;"></div>
-  </div>
+      <div style="width: 30%"></div>
+    </div>
   </body>
   <script src="../project4/js/index.js"></script>
   <script src="../project4/js/audio.js" type="module"></script>
