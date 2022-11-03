@@ -56,10 +56,7 @@ making borders, gaps and deciding how things looks*/
     grid-template-rows: auto auto;
 }
 .content>div{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding: 15px 4px;
     background-size: cover;
     min-height: 175px;
     position: relative;
@@ -513,7 +510,7 @@ textarea.input-big{
   }
 
   .search-grid>div{
-    padding: 20px;
+    padding: 15px 4px;
     background-size: cover;
     min-height: 175px;
     position: relative;
