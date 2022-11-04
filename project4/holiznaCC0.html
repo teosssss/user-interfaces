@@ -22,12 +22,18 @@
           <a href="login.html"><button id="login">Log In</button></a>
           <a href="register.html"><button id="register">Register</button></a>
           <a href="user.html"
-            ><i class="user-icon fa fa-user-circle fa-2xl" style="display:none"></i
+            ><i
+              class="user-icon fa fa-user-circle fa-2xl"
+              style="display: none"
+            ></i
           ></a>
         </div>
       </div>
       <div class="sidebar">
         <ul id="sidebar-list">
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
           <li>
             <a href="search.html"
               ><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Search</a
@@ -38,14 +44,8 @@
               ><i class="fa-sharp fa-solid fa-plus"></i> New Playlist</a
             >
           </li>
-          <li>
-            <a href="#"
-              ><i class="fa-sharp fa-solid fa-bookmark"></i> Saved songs</a
-            >
-          </li>
-          <li>
-            <a href="#"><i class="fa-sharp fa-solid fa-gear"></i> Settings</a>
-          </li>
+
+          <hr class="solid" />
         </ul>
       </div>
       <div class="content">
@@ -128,15 +128,17 @@
   <script src="../project4/js/index.js"></script>
   <script>
     var releaseDate = new Date("Dec 24, 2022 18:00").getTime();
-    var countdownfunction = setInterval(function() {
-        var now = new Date().getTime();
-        var distance = releaseDate - now;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        document.getElementById("counter").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
-      }, 1000);
-    </script>
+    var countdownfunction = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = releaseDate - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("counter").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    }, 1000);
+  </script>
 </html>
