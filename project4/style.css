@@ -30,7 +30,15 @@ making borders, gaps and deciding how things looks*/
 .header{
     background-image: linear-gradient(to right, #041C32 , #1278B9);
     grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
    
+}
+
+.header-button{
+    display: inline-flex;
+    align-items: center;
 }
 
 .sidebar{

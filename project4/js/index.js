@@ -3,13 +3,10 @@ window.addEventListener("load",()=>{
     if (isLogged()){
         document.getElementById("login").style.display="none"
         document.getElementById("register").style.display="none"
+        document.querySelector(".user-icon").style.display="block"
         displayPlaylist()
-        document.getElementById("ad").innerText="Thank you for using AudioCity!"
     } 
-    else {
-
-        document.getElementById("userPhoto").style.display="none"
-    }
+    
 })
 
 
@@ -36,15 +33,3 @@ function displayPlaylist(){
         sidebarList.append(el)
     });
 }
-
-var releaseDate = new Date("Dec 24, 2022 18:00").getTime();
-var countdownfunction = setInterval(function() {
-    var now = new Date().getTime();
-    var distance = releaseDate - now;
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("counter").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-  }, 1000);
