@@ -4,6 +4,7 @@ const btn=document.getElementById("login")
 
 btn.addEventListener('click',  (e)=>{
   e.preventDefault()
+  //if login is ok return to main page
   if  (checkLogin()){
     window.location.replace("index.html");
   }
@@ -20,6 +21,7 @@ function checkLogin(){
       username:document.getElementById("userName").value,
       password:document.getElementById("userPassword").value,
   }
+  //check if user exist in local storage
   if (users.find(u=>u.username==user.username) && users.find(u=>u.password==user.password)) {
       window.sessionStorage.setItem("user",user.username)
       return true

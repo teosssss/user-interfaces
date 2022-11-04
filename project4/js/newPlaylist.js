@@ -3,6 +3,7 @@ document.getElementById("create").onclick=()=>{
   
     playlists=JSON.parse(playlists)
     
+    //get user playlist
     let UserPlaylists=playlists.find(playlist=> playlist.user==sessionStorage.getItem("user"))
     var newPlaylist ={
         name: document.getElementById("name").value,
@@ -13,7 +14,7 @@ document.getElementById("create").onclick=()=>{
 
 
    console.log(playlists.find(p=>p.name==newPlaylist.name))
-
+   //if playlist is correct and is unique push playlist in local storage
     if (UserPlaylists.playlists.find(p=>p.name==newPlaylist.name)){
         alert("Nome playlist gia esistente")
     } else if(newPlaylist.name==""){
