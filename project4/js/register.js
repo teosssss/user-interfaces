@@ -97,7 +97,7 @@ function validatePassword(password){
     let re1=/^(.*[A-Z].*)$/;
 
     if (!re1.test(password) ){
-        addBadge("pw needs a lower case charachter","Password")
+        addBadge("pw needs a upper case charachter","Password")
         return false
     } 
     let re2=/^.{8,}$/;
