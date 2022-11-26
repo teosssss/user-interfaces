@@ -13,18 +13,16 @@ making borders, gaps and deciding how things looks*/
     min-height: 100vh;
     grid-template-columns: 0.21fr 0.8fr;
     grid-template-rows: 0.4fr 3fr 0.4fr;
-    grid-gap: 5px;
     grid-template-areas: 
-      'header header' 
+      'sidebar header' 
       'sidebar  content' 
-      'footer footer';
+      'sidebar content';
     background-image: linear-gradient(to right, #041C32 , #1278B9);
 
 }
 
 .grid-container>div{
     padding: 15px;
-    border-radius: 10px; 
 }
 
 .header{
@@ -38,20 +36,20 @@ making borders, gaps and deciding how things looks*/
 
 .header-button{
     display: inline-flex;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .sidebar{
     background-color: #041C32;
     grid-area: sidebar;
     display: flex;
+    flex-direction: column;
 }
-.footer{
-    grid-area: footer;
-    background-image: linear-gradient(to right, #041C32 , #1278B9);
-    text-align: center;
-    font-size: 20px;
-} 
+.header-sidebar{
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
 
 .content{
     background-image: linear-gradient(to right, #041C32 , #1278B9);
@@ -216,7 +214,7 @@ margin-left: 10px;
     'header'
     'sidebar'
     'content'
-    'footer';
+    ;
     }
 
     
@@ -250,7 +248,7 @@ margin-left: 10px;
         'header'
         'sidebar'
         'content'
-        'footer';
+        ;
         }
         .content {
             display: grid;
@@ -275,7 +273,7 @@ margin-left: 10px;
     
 }
 
-@media (min-width:768px) and (max-width: 1200px ) {
+@media (min-width:768px) and (max-width: 1188px ) {
     .grid-container  {
         grid-template-rows: auto auto auto auto;
         grid-template-columns: 1fr;
@@ -283,7 +281,7 @@ margin-left: 10px;
         'header'
         'sidebar'
         'content'
-        'footer';
+       ;
         }
         .content {
             display: grid;
