@@ -18,6 +18,7 @@ function registerLocal() {
         users = JSON.parse(users)
     }    
 
+    //create a user
     var user = {
                 name:document.getElementById("name").value,
                 surname:document.getElementById("surname").value,
@@ -26,7 +27,8 @@ function registerLocal() {
                 password: document.getElementById("userPassword").value,
         }    
         
-    
+
+        //check if user exist
         if (users.find(u=>u.email==user.email)){
             addBadge("email already exist","Email")
             
@@ -36,7 +38,7 @@ function registerLocal() {
         } else {
             users.push(user)
             localStorage.setItem("users",JSON.stringify(users))
-            //setto una playlista vuota per ogni nuovo utente
+            //set empty playlist for each user registered
             let playlists=localStorage.getItem("playlists")
             playlists=JSON.parse(playlists)
 
@@ -49,6 +51,7 @@ function registerLocal() {
             }
             playlists.push(newUserPlaylists)
             window.localStorage.setItem("playlists",JSON.stringify(playlists))
+            //go to login
             location.assign("login.html")
 
             alert("user registered")
@@ -75,7 +78,7 @@ function addBadge(text,el){
 }
 
 
-
+//regular expressions to check if email and password are correct
 function validateEmail(email) {
 
     clearBadge("Email")
@@ -97,7 +100,7 @@ function validatePassword(password){
     let re1=/^(.*[A-Z].*)$/;
 
     if (!re1.test(password) ){
-        addBadge("pw needs a lower case charachter","Password")
+        addBadge("pw needs a upper case charachter","Password")
         return false
     } 
     let re2=/^.{8,}$/;

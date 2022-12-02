@@ -6,6 +6,7 @@ window.addEventListener("load",()=>{
     const name = urlParams.get('name')
     playlistName.textContent=name
     
+    //get the playlist from the local storage
     var playlists=window.localStorage.getItem("playlists")
     playlists=JSON.parse(playlists)
     var userLogged=window.sessionStorage.getItem("user")
@@ -13,7 +14,7 @@ window.addEventListener("load",()=>{
     var playlist=userPlaylists.playlists.find(p=>p.name==name)
 
     var songList=document.getElementById("playlist-song")
-
+    //set each song of the playlist
     playlist.songs.forEach(song => {
         var songEl=document.createElement("li")
         var divider=document.createElement("hr")

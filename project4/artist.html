@@ -50,57 +50,18 @@
       </div>
       <div class="content">
         <div style="background: none" class="songartistpage">
-          <h1>HoliznaCC0</h1>
+          <h1 id="artistName"></h1>
           <br />
           <h2>Recent releases</h2>
         </div>
 
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/skyscrapers.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">Sky Scrapers</p>
-          <p class="songartist">HoliznaCC0</p>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/seasonschange.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">Seasons Change</p>
-          <p class="songartist">HoliznaCC0</p>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/getevil.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">Get Evil</p>
-          <p class="songartist">HoliznaCC0</p>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/goodvibes.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">Good Vibes</p>
-          <p class="songartist">HoliznaCC0</p>
-        </div>
+        
 
-        <h2 class="songartistpage">New release:</h2>
+       <!-- <h2 class="songartistpage">New release:</h2>
         <br />
         <p class="counter" id="counter"></p>
+      -->
       </div>
-
       <div class="footer">
         <br />
         <p>Sign up to the AudioCity today!</p>
@@ -126,19 +87,5 @@
   </body>
   <script src="../project4/js/audio.js" type="module"></script>
   <script src="../project4/js/index.js"></script>
-  <script>
-    var releaseDate = new Date("Dec 24, 2022 18:00").getTime();
-    var countdownfunction = setInterval(function () {
-      var now = new Date().getTime();
-      var distance = releaseDate - now;
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      document.getElementById("counter").innerHTML =
-        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-    }, 1000);
-  </script>
+  <script src="../project4/js/artist.js" type="module"></script>
 </html>

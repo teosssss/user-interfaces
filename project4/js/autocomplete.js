@@ -1,5 +1,7 @@
+//jquery autocomplete function
 $(document).ready(function () {
     $(function () {
+      //input array to autocomplete
       var songs = [
         'sunset',
         'get evil',

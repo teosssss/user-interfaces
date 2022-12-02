@@ -70,6 +70,8 @@ addBtn.addEventListener("click",()=>{
     if (playlist.songs.find(s=>s==songName)){
         alert("song already exist in playlist")
         return
+    } else {
+        alert("song added to the playlist")
     }
      
     playlist.songs.push(songName)

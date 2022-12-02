@@ -16,18 +16,35 @@
   <body>
     <div class="grid-container">
       <div class="header">
-        <a href="index.html"
-          ><img src="../project4/assets/logo/logo.png" alt="logo" class="logo"
-        /></a>
-        <div class="header-button">
-          <a href="login.html"><button id="login">Log In</button></a>
-          <a href="register.html"><button id="register">Register</button></a>
-          <a href="user.html"
-            ><i class="user-icon fa fa-user-circle fa-2xl"></i
-          ></a>
+
+       
+        <form action="" class="search-bar">
+          <input type="text" size="25" placeholder="Search..." id="song" />
+          <button type="submit" id="search">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+        <div class="user-button">
+        <a href="login.html"><button id="login">Log In</button></a>
+        <a href="register.html"><button id="register">Register</button></a>
+        <a href="user.html"
+          ><i
+            class="user-icon fa fa-user-circle fa-2xl"
+            style="display: none"
+          ></i
+        ></a>
         </div>
       </div>
       <div class="sidebar">
+        <div class="header-sidebar">
+          <a href="index.html"
+            ><img src="project4/assets/logo/logo.png" alt="logo" class="logo"
+          /></a>
+          <svg width="34" height="22" viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 21.6884H0V18.0737H17V21.6884ZM34 12.6516H0V9.03684H34V12.6516ZM34 3.61474H17V0H34V3.61474Z" fill="white"/>
+            </svg>
+        </div>
         <ul id="sidebar-list">
           <li>
             <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
@@ -58,13 +75,7 @@
         <hr />
         <ul id="playlist-song"></ul>
       </div>
-      <div class="footer">
-        <br />
-        <p>Sign up to the AudioCity today!</p>
-        <br />
-        <p class="songartist">© Secure Privacy 2022. All Rights Reserved.</p>
-        <a class="legal" href="#">Cookies and Legal</a>
-      </div>
+      
     </div>
     <div class="audio-container" id="container" style="display: none">
       <div class="image-box">

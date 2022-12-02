@@ -16,23 +16,36 @@
   <body>
     <div class="grid-container">
       <div class="header">
-        <a href="index.html"
-          ><img src="../project4/assets/logo/logo.png" alt="logo" class="logo"
-        /></a>
-        <div class="header-button">
-          <a href="login.html"><button id="login">Log In</button></a>
-          <a href="register.html"
-            ><button style="margin: 10px" id="register">Register</button></a
-          >
-          <a style="text-decoration: none" id="userPhoto" href="user.html"
-            ><i
-              class="user-icon fa fa-user-circle fa-2xl"
-              style="display: none"
-            ></i
-          ></a>
+        
+        <form action="" class="search-bar">
+          <input type="text" size="25" placeholder="Search..." id="song" />
+          <button type="submit" id="search">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+        <div class="user-button">
+        <a href="login.html"><button id="login">Log In</button></a>
+        <a href="register.html"><button id="register">Register</button></a>
+        <a href="user.html"
+          ><i
+            class="user-icon fa fa-user-circle fa-2xl"
+            style="display: none"
+          ></i
+        ></a>
         </div>
+      
       </div>
       <div class="sidebar">
+        <div class="header-sidebar">
+        <a href="index.html"
+          ><img src="project4/assets/logo/logo.png" alt="logo" class="logo"
+        /></a>
+        <svg width="34" height="22" viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 21.6884H0V18.0737H17V21.6884ZM34 12.6516H0V9.03684H34V12.6516ZM34 3.61474H17V0H34V3.61474Z" fill="white"/>
+          </svg>
+          
+        </div>
         <ul id="sidebar-list">
           <li>
             <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
@@ -51,7 +64,10 @@
           <hr class="solid" />
         </ul>
       </div>
+      <div class="main">
+        <h1>Welcome Back!</h1>
       <div class="content">
+        
         <div class="songdiv">
           <img
             class="songcover"
@@ -60,7 +76,7 @@
           />
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Sky Scrapers</p>
-          <a style="text-decoration: none" href="holiznaCC0.html"
+          <a style="text-decoration: none" href="artist.html?name=HoliznaCC0"
             ><p class="songartist">HoliznaCC0</p></a
           >
         </div>
@@ -72,7 +88,7 @@
           />
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Seasons Change</p>
-          <a style="text-decoration: none" href="holiznaCC0.html"
+          <a style="text-decoration: none" href="artist.html?name=HoliznaCC0"
             ><p class="songartist">HoliznaCC0</p></a
           >
         </div>
@@ -84,7 +100,8 @@
           />
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Riorr</p>
-          <p class="songartist">Audiorezout</p>
+          <a style="text-decoration: none" href="artist.html?name=Audiorezout">
+          <p class="songartist">Audiorezout</p></a>
         </div>
         <div class="songdiv">
           <img
@@ -94,7 +111,8 @@
           />
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Reflection</p>
-          <p class="songartist">Makaih Beats</p>
+          <a style="text-decoration: none" href="artist.html?name=Mikah Beats">
+          <p class="songartist">Mikah Beats</p></a>
         </div>
         <div class="songdiv">
           <img
@@ -104,7 +122,8 @@
           />
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Sweet Love</p>
-          <p class="songartist">Maarten Schellekens</p>
+          <a style="text-decoration: none" href="artist.html?name=Maarten Schellekens">
+          <p class="songartist">Maarten Schellekens</p></a>
         </div>
         <div class="songdiv">
           <img
@@ -114,7 +133,8 @@
           />
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">SUNSET</p>
-          <p class="songartist">Caslo</p>
+          <a style="text-decoration: none" href="artist.html?name=Caslo">
+          <p class="songartist">Caslo</p></a>
         </div>
         <div class="songdiv">
           <img
@@ -124,7 +144,8 @@
           />
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Wicked</p>
-          <p class="songartist">Pierce Murphy</p>
+          <a style="text-decoration: none" href="artist.html?name=Pierce Murphy">
+          <p class="songartist">Pierce Murphy</p></a>
         </div>
         <div class="songdiv">
           <img
@@ -134,40 +155,13 @@
           />
           <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
           <p class="songtitle">Permanent Damage</p>
-          <p class="songartist">Mikah Beats</p>
+          <a style="text-decoration: none" href="artist.html?name=Mikah Beats">
+          <p class="songartist">Mikah Beats</p></a>
         </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/getevil.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">Get Evil</p>
-          <a style="text-decoration: none" href="holiznaCC0.html"
-            ><p class="songartist">HoliznaCC0</p></a
-          >
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/goodvibes.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">Good Vibes</p>
-          <a style="text-decoration: none" href="holiznaCC0.html"
-            ><p class="songartist">HoliznaCC0</p></a
-          >
-        </div>
+        
       </div>
-      <div class="footer">
-        <br />
-        <p id="ad">Sign up to the AudioCity today!</p>
-        <br />
-        <p class="songartist">© Secure Privacy 2022. All Rights Reserved.</p>
-        <a class="legal" href="#">Cookies and Legal</a>
       </div>
+      
     </div>
     <div class="audio-container" id="container" style="display: none">
       <div class="image-box">
@@ -184,6 +178,6 @@
       <div style="width: 30%"></div>
     </div>
   </body>
-  <script src="../project4/js/index.js"></script>
-  <script src="../project4/js/audio.js" type="module"></script>
+  <script src="project4/js/index.js"></script>
+  <script src="/Users/matteo/Desktop/erasmus/user-interfaces/user-interfaces/project4/js/audio.js" type="module"></script>
 </html>

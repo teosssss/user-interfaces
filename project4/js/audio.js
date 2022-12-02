@@ -1,4 +1,7 @@
+//import json file 
 import myJson from '../json/song.json' assert {type: 'json'};
+
+//set a delay to make all the other scripts work
 function delay() {
     setTimeout(function() {
         loadSong();
@@ -15,6 +18,7 @@ if (document.readyState == 'complete') {
     }
 }
 
+//load the audio of the song in each song of the playlist
 function loadSong() {
     var playIcon=document.querySelectorAll(".playIcon")
 
@@ -22,7 +26,7 @@ function loadSong() {
     playIcon.forEach(el => {
         var searchedSong=el.nextElementSibling;
 
-
+        //for each playIcon set the song bar when its clicked
         el.addEventListener("click",()=>{
             var song=myJson.find(s=>s.song==searchedSong.textContent.toLowerCase())
     

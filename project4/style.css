@@ -13,15 +13,14 @@ making borders, gaps and deciding how things looks*/
     min-height: 100vh;
     max-height: 100vh;
     grid-template-columns: 0.21fr 0.8fr;
-    grid-template-rows: 0.2fr 5fr 0.4fr;
+    grid-template-rows: 0.4fr 3fr 0.4fr;
     grid-gap: 5px;
     grid-template-areas: 
       'header header' 
       'sidebar  content' 
       'footer footer';
-      background: #10141F;
-    ;
-    
+    background-image: linear-gradient(to right, #041C32 , #1278B9);
+
 }
 .imagebg{
     -webkit-user-drag: none;
@@ -39,13 +38,11 @@ border: 1px solid #000000;
 filter: blur(91px);
 }
 .grid-container>div{
-    padding: 15px;
-    border-radius: 10px; 
+    padding: 25px;
 }
 
 .header{
-    background: #10141F;
-
+    background-image: linear-gradient(to right, #041C32 , #1278B9);
     grid-area: header;
     display: flex;
     justify-content: space-between;
@@ -55,29 +52,29 @@ filter: blur(91px);
 
 .header-button{
     display: inline-flex;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .sidebar{
     background: #10141F;
     grid-area: sidebar;
     display: flex;
+    flex-direction: column;
 }
 .footer{
     grid-area: footer;
-    background: #10141F;
+    background-image: linear-gradient(to right, #041C32 , #1278B9);
     text-align: center;
     font-size: 20px;
 } 
 
-
 .content{
-    background: #10141F;
+    background-image: linear-gradient(to right, #041C32 , #1278B9);
     overflow: auto;
     grid-area: content;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
 }
 .content>div{
@@ -234,7 +231,7 @@ margin-left: 10px;
     'header'
     'sidebar'
     'content'
-    'footer';
+    ;
     }
 
     
@@ -268,7 +265,7 @@ margin-left: 10px;
         'header'
         'sidebar'
         'content'
-        'footer';
+        ;
         }
         .content {
             display: grid;
@@ -293,7 +290,7 @@ margin-left: 10px;
     
 }
 
-@media (min-width:768px) and (max-width: 1200px ) {
+@media (min-width:768px) and (max-width: 1188px ) {
     .grid-container  {
         grid-template-rows: auto auto auto auto;
         grid-template-columns: 1fr;
@@ -301,7 +298,7 @@ margin-left: 10px;
         'header'
         'sidebar'
         'content'
-        'footer';
+       ;
         }
         .content {
             display: grid;
