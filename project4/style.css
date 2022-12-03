@@ -13,12 +13,12 @@ making borders, gaps and deciding how things looks*/
     min-height: 100vh;
     max-height: 100vh;
     grid-template-columns: 0.21fr 0.8fr;
-    grid-template-rows: 0.4fr 3fr 0.4fr;
+    grid-template-rows: 0.2fr 5fr 0.4fr;
     grid-gap: 5px;
     grid-template-areas: 
-      'header header' 
+      'sidebar header' 
       'sidebar  content' 
-      'footer footer';
+      'sidebar footer';
     background-image: linear-gradient(to right, #041C32 , #1278B9);
 
 }
@@ -34,8 +34,8 @@ making borders, gaps and deciding how things looks*/
     left: 337px;
     top: 0px;
 
-border: 1px solid #000000;
-filter: blur(91px);
+    border: 1px solid #000000;
+    filter: blur(91px);
 }
 .grid-container>div{
     padding: 25px;
@@ -50,9 +50,10 @@ filter: blur(91px);
    
 }
 
-.header-button{
+.header-sidebar{
     display: inline-flex;
     justify-content: space-between;
+    gap:20px;
 }
 
 .sidebar{
@@ -60,6 +61,7 @@ filter: blur(91px);
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 .footer{
     grid-area: footer;
