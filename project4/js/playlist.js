@@ -14,6 +14,11 @@ window.addEventListener("load",()=>{
     var playlist=userPlaylists.playlists.find(p=>p.name==name)
 
     var songList=document.getElementById("playlist-song")
+
+    //set playlist likes
+    var likes=document.getElementById("likes")
+    likes.innerText=playlist.likes
+
     //set each song of the playlist
     playlist.songs.forEach(song => {
         var songEl=document.createElement("li")

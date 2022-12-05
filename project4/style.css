@@ -12,7 +12,7 @@ making borders, gaps and deciding how things looks*/
     min-width: fit-content;
     min-height: 100vh;
     max-height: 100vh;
-    grid-template-columns: 0.25fr 0.8fr;
+    grid-template-columns: 0.21fr 0.8fr;
     grid-template-rows: 0.2fr 5fr 0.4fr;
     grid-gap: 5px;
     grid-template-areas: 
@@ -296,7 +296,7 @@ margin-left: 10px;
     
 }
 
-@media (min-width:768px) and (max-width: 1200px ) {
+@media (min-width:768px) and (max-width: 1188px ) {
     .grid-container  {
         grid-template-rows: auto auto auto auto;
         grid-template-columns: 1fr;
@@ -619,9 +619,16 @@ option{
 }
 
 .playlist-box{
+    background-color: #041C32;
     grid-area: content;
     display: flex;
     flex-direction: column;
+}
+
+.playlist-header{
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .song-element{
@@ -701,3 +708,5 @@ font-size: 30px;
     position: relative;
     margin: 10px;
 }
+
+

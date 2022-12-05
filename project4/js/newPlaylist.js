@@ -8,6 +8,7 @@ document.getElementById("create").onclick=()=>{
     var newPlaylist ={
         name: document.getElementById("name").value,
         description: document.getElementById("description").value,
+        likes: 0,
         songs:[]
     }
   
