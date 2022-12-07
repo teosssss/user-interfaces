@@ -38,19 +38,7 @@ function registerLocal() {
         } else {
             users.push(user)
             localStorage.setItem("users",JSON.stringify(users))
-            //set empty playlist for each user registered
-            let playlists=localStorage.getItem("playlists")
-            playlists=JSON.parse(playlists)
-
-            if (playlists===null){
-                playlists=[]
-            }
-            newUserPlaylists={
-                user:user.username,
-                playlists:[]
-            }
-            playlists.push(newUserPlaylists)
-            window.localStorage.setItem("playlists",JSON.stringify(playlists))
+            
             //go to login
             location.assign("login.html")
 

@@ -21,13 +21,13 @@ function displayPlaylist(){
     var playlists=window.localStorage.getItem("playlists")
     playlists=JSON.parse(playlists)
     var userLogged=window.sessionStorage.getItem("user")
-    var userPlaylists=playlists.find(p=>p.user==userLogged)
+    var userPlaylists=playlists.filter(p=>p.user==userLogged)
 
     var sidebarList=document.getElementById("sidebar-list")
-    userPlaylists.playlists.forEach(playlist => {
+    userPlaylists.forEach(playlist => {
         var el=document.createElement("li")
         var link=document.createElement("a")
-        link.href="playlist.html?name="+playlist.name
+        link.href="playlist.html?name="+playlist.name+"&user="+userLogged
         link.textContent=playlist.name
         el.appendChild(link)
         sidebarList.append(el)

@@ -9,14 +9,15 @@ likeIcon.addEventListener("click",()=>{
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const name = urlParams.get('name')
+    const user=urlParams.get('user')
     playlistName.textContent=name
 
     //get this playlist
     playlists = window.localStorage.getItem("playlists")
     playlists = JSON.parse(playlists)
-    var userLogged = window.sessionStorage.getItem("user")
-    var userPlaylists = playlists.find(p => p.user == userLogged)
-    playlist= userPlaylists.playlists.find(p => p.name == name)
+    var userLogged = window.sessionStorage.getItem("user")  
+    var playlist=playlists.find(p=>p.name==name && p.user==user)
+
     
     //toggle the like icon
     var likes=playlist.likes
@@ -37,7 +38,7 @@ likeIcon.addEventListener("click",()=>{
         document.getElementById("likes").innerText=likesNumber.toString()
         playlist.likes=likesNumber.toString()
         //delete the user from the likes
-        playlist.likedBy.filter(u=>u==user)
+        playlist.likedBy.splice(playlist.likedBy.findIndex(u => u == userLogged),1);
 
     }
 
