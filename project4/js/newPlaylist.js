@@ -4,11 +4,11 @@ document.getElementById("create").onclick=()=>{
     playlists=JSON.parse(playlists)
     
     //get user playlist
-    let UserPlaylists=playlists.find(playlist=> playlist.user==sessionStorage.getItem("user"))
     var newPlaylist ={
         name: document.getElementById("name").value,
         description: document.getElementById("description").value,
         likes: 0,
+        likedBy:[],
         songs:[]
     }
   

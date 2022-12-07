@@ -19,6 +19,13 @@ window.addEventListener("load",()=>{
     var likes=document.getElementById("likes")
     likes.innerText=playlist.likes
 
+    //check if the user liked that playlist and load the correct icon
+    userLikes=playlist.likedBy.find(u=>u==userLogged)
+    if (userLikes!=null){
+        const likeIcon=document.querySelector(".fa-heart")
+        likeIcon.classList.add("fa-solid")
+    }
+
     //set each song of the playlist
     playlist.songs.forEach(song => {
         var songEl=document.createElement("li")
