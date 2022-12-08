@@ -1,15 +1,24 @@
+//Register
 const registerBtn=document.getElementById("register")
-
 registerBtn.addEventListener('click',(e)=>{
     e.preventDefault()
     if (validateEmail(document.getElementById("userEmail").value) && validatePassword((document.getElementById("userPassword").value))){
-        registerLocal()
+        registerLocal(false)
+    }
+})
+
+//Premium
+const premiumBtn=document.getElementById("premium")
+premiumBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    if (validateEmail(document.getElementById("userEmail").value) && validatePassword((document.getElementById("userPassword").value))){
+        registerLocal(true)
     }
 })
  
 
 
-function registerLocal() {
+function registerLocal(premium) {
     var users = window.localStorage.getItem("users")
 
     if (users === null) {
@@ -25,6 +34,7 @@ function registerLocal() {
                 username: document.getElementById("userName").value,
                 email: document.getElementById("userEmail").value,
                 password: document.getElementById("userPassword").value,
+                premium: premium,
         }    
         
 
