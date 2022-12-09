@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music App</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" id="accessibilityLink" />
     <link rel="shortcut icon" href="assets/logo/logo-square.png" />
     <script
       src="https://kit.fontawesome.com/96629882c6.js"
@@ -14,36 +14,48 @@
     <!-- script for icons-->
   </head>
   <body>
+    <input type="checkbox" class="idk" id="darkMode" />
+    <!-- darkmode.js working, bc it lets run the code and not stopping on first error -->
     <div class="grid-container">
       <div class="header">
-
-       
         <form action="" class="search-bar">
           <input type="text" size="25" placeholder="Search..." id="song" />
           <button type="submit" id="search">
             <i class="fa fa-search"></i>
           </button>
         </form>
-        
+
         <div class="user-button">
-        <a href="login.html"><button id="login">Log In</button></a>
-        <a href="register.html"><button id="register">Register</button></a>
-        <a href="user.html"
-          ><i
-            class="user-icon fa fa-user-circle fa-2xl"
-            style="display: none"
-          ></i
-        ></a>
+          <a href="login.html"><button id="login">Log In</button></a>
+          <a href="register.html"><button id="register">Register</button></a>
+          <a href="user.html"
+            ><i
+              class="user-icon fa fa-user-circle fa-2xl"
+              style="display: none"
+            ></i
+          ></a>
         </div>
       </div>
       <div class="sidebar">
         <div class="header-sidebar">
           <a href="index.html"
-            ><img src="../project4/assets/logo/logo.png" alt="logo" class="logo"
+            ><img
+              src="../project4/assets/logo/logo.png"
+              alt="logo"
+              class="logo"
           /></a>
-          <svg width="34" height="22" viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17 21.6884H0V18.0737H17V21.6884ZM34 12.6516H0V9.03684H34V12.6516ZM34 3.61474H17V0H34V3.61474Z" fill="white"/>
-            </svg>
+          <svg
+            width="34"
+            height="22"
+            viewBox="0 0 34 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 21.6884H0V18.0737H17V21.6884ZM34 12.6516H0V9.03684H34V12.6516ZM34 3.61474H17V0H34V3.61474Z"
+              fill="white"
+            />
+          </svg>
         </div>
         <ul id="sidebar-list">
           <li>
@@ -75,7 +87,6 @@
         <hr />
         <ul id="playlist-song"></ul>
       </div>
-      
     </div>
     <div class="audio-container" id="container" style="display: none">
       <div class="image-box">
@@ -95,4 +106,5 @@
   <script src="../project4/js/index.js"></script>
   <script src="../project4/js/playlist.js"></script>
   <script src="../project4/js/audio.js" type="module"></script>
+  <script src="../project4/js/darkmode.js"></script>
 </html>
