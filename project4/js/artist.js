@@ -1,6 +1,17 @@
 import myJson from '../json/song.json' assert {type: 'json'};
 
 
+//get user 
+var userLogged=window.sessionStorage.getItem("user")
+var users=window.localStorage.getItem("users")
+users=JSON.parse(users)
+if (userLogged!=null){
+    var user=users.find(u=>u.username==userLogged)
+}
+const artistName=document.getElementById("artistName")
+const btn=document.querySelector(".add-btn")
+
+
 window.addEventListener("load",()=>{
     var artistName=document.getElementById("artistName")
     //get from the query the artist
@@ -9,6 +20,11 @@ window.addEventListener("load",()=>{
     const name = urlParams.get('name')
     //set the artist name on the page
     artistName.textContent=name;
+
+    if (userLogged!=null && user.followedArtist.find(artist=> artist == artistName.textContent)){
+        btn.textContent="Following"
+    } 
+
 
     //finf the artist song from the json file
     var artistSongs=myJson.filter(a=>a.author==name)
@@ -44,4 +60,30 @@ window.addEventListener("load",()=>{
 
 
     
+})
+
+
+
+btn.addEventListener("click",()=>{
+
+    if (user!=null){
+        if (btn.textContent=="Follow"){
+            //change text
+            btn.textContent="Following"
+
+            //set the new followed artist in the user obj
+            user.followedArtist.push(artistName.textContent)
+
+            
+        } else {
+            //change text
+            btn.textContent="Follow"
+
+            //delete the user from the likes
+            user.followedArtist.splice(user.followedArtist.findIndex(artist => artist == artistName.textContent))
+
+
+        }
+        window.localStorage.setItem("users",JSON.stringify(users))
+    }
 })

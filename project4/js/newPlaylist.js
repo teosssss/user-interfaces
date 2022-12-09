@@ -1,9 +1,14 @@
 document.getElementById("create").onclick=()=>{
     var playlists=window.localStorage.getItem("playlists")
+
+    if (playlists === null) {
+        playlists = []
+    } else {
+        playlists=JSON.parse(playlists)
+    }    
   
-    playlists=JSON.parse(playlists)
     
-    //get user playlist
+    //create  playlist
     var newPlaylist ={
         user: sessionStorage.getItem("user"),
         name: document.getElementById("name").value,
@@ -12,6 +17,8 @@ document.getElementById("create").onclick=()=>{
         likedBy:[],
         songs:[]
     }
+
+    
   
 
     var userPlaylists=playlists.filter(p=>p.user==sessionStorage.getItem("user"))

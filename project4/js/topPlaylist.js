@@ -30,6 +30,9 @@ playlists.forEach(playlist => {
             likeIcon.classList.add("fa-regular")
 
         }
+    }else {
+        likeIcon.classList.add("fa-regular")
+
     }
 
 

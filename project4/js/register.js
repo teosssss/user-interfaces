@@ -25,6 +25,7 @@ function registerLocal() {
                 username: document.getElementById("userName").value,
                 email: document.getElementById("userEmail").value,
                 password: document.getElementById("userPassword").value,
+                followedArtist:[]
         }    
         
 

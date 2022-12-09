@@ -19,7 +19,12 @@ function isLogged() {
 function displayPlaylist(){
     //setting the user playlist in the sidebar
     var playlists=window.localStorage.getItem("playlists")
-    playlists=JSON.parse(playlists)
+    if (playlists === null) {
+        playlists = []
+    } else {
+        playlists=JSON.parse(playlists)
+    }    
+
     var userLogged=window.sessionStorage.getItem("user")
     var userPlaylists=playlists.filter(p=>p.user==userLogged)
 
