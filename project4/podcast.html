@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/logo/logo-square.png" />
+    <script
+      src="https://kit.fontawesome.com/96629882c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script for icons-->
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header">
+        
+        <form action="" class="search-bar">
+          <input type="text" size="25" placeholder="Search..." id="song" />
+          <button type="submit" id="search">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+        <div class="user-button">
+        <a href="login.html"><button id="login">Log In</button></a>
+        <a href="register.html"><button id="register">Register</button></a>
+        <a href="user.html"
+          ><i
+            class="user-icon fa fa-user-circle fa-2xl"
+            style="display: none"
+          ></i
+        ></a>
+        </div>
+      
+      </div>
+      <div class="sidebar">
+        <div class="header-sidebar">
+        <a href="index.html"
+          ><img src="../project4/assets/logo/logo.png" alt="logo" class="logo"
+        /></a>
+        <svg width="34" height="22" viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 21.6884H0V18.0737H17V21.6884ZM34 12.6516H0V9.03684H34V12.6516ZM34 3.61474H17V0H34V3.61474Z" fill="white"/>
+          </svg>
+          
+        </div>
+        <ul id="sidebar-list">
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+          <li>
+            <a href="topPlaylist.html"><i class="fa-solid fa-circle-play"></i> Top playlist</a>
+          </li>
+          <li>
+            <a href="podcast.html"><i class="fa-solid fa-podcast"></i> Podcasts</a>
+          </li>
+          <li>
+            <a href="search.html"
+              ><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Search</a
+            >
+          </li>
+          <li>
+            <a href="create.html"
+              ><i class="fa-sharp fa-solid fa-plus"></i> New Playlist</a
+            >
+          </li>
+
+          <hr class="solid" />
+        </ul>
+      </div>
+      <div class="main"> 
+        <h1 class="podcast-header">Podcast Categories</h1>
+      <div class="content">
+        <div class="podcast-div"> 
+          <a style="text-decoration: none" href="podcast-edu.html">
+            <p class="podcast-title">Educational</p>
+            <img
+              class="podcast-genre-cover"
+              src="./assets/images/education-background.jpg"
+              alt="Album Cover"
+            />
+        </a>
+      </div>
+        <div class="podcast-div"> 
+          <a style="text-decoration: none" href="podcast-books.html">
+            <p class="podcast-title">Books</p>
+            <img
+              class="podcast-genre-cover"
+              src="./assets/images/books.jpg"
+              alt="Album Cover"
+            />
+        </a>
+      </div>
+      <div class="podcast-div"> 
+        <a style="text-decoration: none" href="podcast-pop-culture.html">
+          <p class="podcast-title">Pop Culture</p>
+          <img
+            class="podcast-genre-cover"
+            src="./assets/images/pop-culture.jpg"
+            alt="Album Cover"
+          />
+      </a>
+    </div>
+    <div class="podcast-div"> 
+      <a style="text-decoration: none" href="podcast-comedy.html">
+        <p class="podcast-title">Comedy</p>
+        <img
+          class="podcast-genre-cover"
+          src="./assets/images/Comedy.jpg"
+          alt="Album Cover"
+        />
+    </a>
+  </div>
+        
+      </div>
+      </div>
+      
+    </div>
+    <div class="audio-container" id="container" style="display: none">
+      <div class="image-box">
+        <img class="audio-bar-img" src="" alt="Album Cover" />
+        <div class="">
+          <p class="songtitle"></p>
+          <p class="songartist"></p>
+        </div>
+      </div>
+      <audio controls>
+        <source src="" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <div style="width: 30%"></div>
+    </div>
+  </body>
+  <script src="../project4/js/index.js"></script>
+  <script src="../project4/js/artist.js" type="module"></script>
+  <script src="../project4/js/podcast.js"></script>
+</html>
