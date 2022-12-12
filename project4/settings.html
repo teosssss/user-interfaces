@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music App</title>
     <link rel="stylesheet" href="style.css" id="accessibilityLink" />
-    <link rel="shortcut icon" href="assets/logo/logo-square.png" />
+    <link rel="shortcut icon" href="assets/logo/logo1-square.png" />
     <script
       src="https://kit.fontawesome.com/96629882c6.js"
       crossorigin="anonymous"
@@ -46,7 +46,7 @@
         <div class="header-sidebar">
           <a href="index.html"
             ><img
-              src="../project4/assets/logo/logo.png"
+              src="../project4/assets/logo/logo1v2c.png"
               alt="logo"
               class="logo"
           /></a>
@@ -92,10 +92,93 @@
           <hr class="solid" />
         </ul>
       </div>
-      <div class="main">
-        <h1 style="padding: 10px">Top playlist</h1>
-        <div class="content"></div>
+      <div class="main-content">
+        <div></div>
+        <div class="settings">
+          <p style="font-size: x-large">Settings</p>
+          <br />
+          <p style="font-size: large">Language</p>
+          <p class="settings-text">
+            Choose language - changes will be applied after app restart
+          </p>
+          <div class="lang-menu">
+            <div class="selected-language">
+              English <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <ul>
+              <li><a href="#">Español</a></li>
+              <li><a href="#">Deutsch</a></li>
+              <li><a href="#">Polski</a></li>
+            </ul>
+          </div>
+          <br />
+          <br />
+          <p style="font-size: large">Dark mode</p>
+          <div>
+            <label class="settings-text" for=""
+              >Change color palette to dark and save your eyes in the
+              night<input type="checkbox" name="" id="darkMode"
+            /></label>
+          </div>
+          <br />
+          <br />
+          <p style="font-size: large">Accesibility mode</p>
+          <div>
+            <label class="settings-text" for=""
+              >Bigger text and less options on screen<input
+                type="checkbox"
+                name=""
+                id="accessibilityMode"
+            /></label>
+          </div>
+          <br />
+          <br />
+          <p style="font-size: large">Hi-fi quality</p>
+          <div>
+            <label class="settings-text" for=""
+              >Better audio quality - user more data<input
+                type="checkbox"
+                name=""
+                id=""
+            /></label>
+          </div>
+          <br />
+          <br />
+          <p style="font-size: large">Explicit content</p>
+          <div>
+            <label class="settings-text" for=""
+              >Allow to play explicit content<input
+                type="checkbox"
+                name=""
+                id=""
+            /></label>
+          </div>
+          <br />
+          <br />
+          <p style="font-size: large">Inaccecible music</p>
+          <div>
+            <label class="settings-text" for=""
+              >Show music that is not accesible from your region<input
+                type="checkbox"
+                name=""
+                id=""
+            /></label>
+          </div>
+          <br />
+          <br />
+          <p style="font-size: large">Smooth transition</p>
+          <div>
+            <label class="settings-text" for=""
+              >Enable two second smooth transition between tracks<input
+                type="checkbox"
+                name=""
+                id=""
+            /></label>
+          </div>
+        </div>
       </div>
+
+      <div class="footer"></div>
     </div>
     <div class="audio-container" id="container" style="display: none">
       <div class="image-box">
@@ -113,7 +196,7 @@
     </div>
   </body>
   <script src="../project4/js/index.js"></script>
-  <script src="../project4/js/topPlaylist.js"></script>
+  <script src="../project4/js/artist.js" type="module"></script>
   <script src="../project4/js/audio.js" type="module"></script>
   <script src="../project4/js/darkmode.js"></script>
 </html>
