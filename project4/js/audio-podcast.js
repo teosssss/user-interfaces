@@ -1,6 +1,5 @@
 //import json file 
-import myJson from '../json/song.json' assert {type: 'json'};
-
+import myJson from '../json/podcast.json' assert {type: 'json'};
 
 //set a delay to make all the other scripts work
 function delay() {
