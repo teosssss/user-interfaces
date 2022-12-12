@@ -5,9 +5,10 @@ const searchBtn=document.getElementById("search");
 searchBtn.addEventListener("click",async (e)=>{
   e.preventDefault()
   
-  var searchedSong=document.getElementById("song")
+  var searchedSong=document.getElementById("song").value
+  var searchedSonglower = searchedSong.toLowerCase()
   //search if song exist in json file with all the songs
-  var song=myJson.find(s=>s.song==searchedSong.value)
+  var song=myJson.find(s=>s.song.toLowerCase()==searchedSonglower)
   
   var searchGrid=document.querySelector(".search-grid")
   if (searchGrid.style.display=="none"){
@@ -22,7 +23,6 @@ searchBtn.addEventListener("click",async (e)=>{
   //set title and author
   title.textContent=song.song
   artist.textContent=song.author
-
 })
 
 window.addEventListener("load",()=>{
@@ -30,9 +30,9 @@ window.addEventListener("load",()=>{
     var user=window.sessionStorage.getItem("user")
     if (user!=null){
         playlists=JSON.parse(playlists)
-        var userPlaylists=playlists.find(p=>p.user==user)
+        var userPlaylists=playlists.filter(p=>p.user==user)
         var dropdown=document.getElementById("playlist-dropdown")
-        userPlaylists.playlists.forEach(playlist => {
+        userPlaylists.forEach(playlist => {
             var option=document.createElement("option")
             option.value=playlist.name
             option.textContent=playlist.name
@@ -62,10 +62,8 @@ addBtn.addEventListener("click",()=>{
     }
     //extract the playlist song
     var playlists=window.localStorage.getItem("playlists")
-    var user=window.sessionStorage.getItem("user")
     playlists=JSON.parse(playlists)
-    var userPlaylists=playlists.find(p=>p.user==user)
-    var playlist=userPlaylists.playlists.find(p=>p.name==selectValue)
+    var playlist=playlists.find(p=>p.name==selectValue && p.user==userLogged)
     //select if song is already in playlist
     if (playlist.songs.find(s=>s==songName)){
         alert("song already exist in playlist")
