@@ -4,16 +4,28 @@ window.addEventListener("load",()=>{
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const name = urlParams.get('name')
+    const user= urlParams.get('user')
     playlistName.textContent=name
     
     //get the playlist from the local storage
     var playlists=window.localStorage.getItem("playlists")
     playlists=JSON.parse(playlists)
     var userLogged=window.sessionStorage.getItem("user")
-    var userPlaylists=playlists.find(p=>p.user==userLogged)
-    var playlist=userPlaylists.playlists.find(p=>p.name==name)
+    var playlist=playlists.find(p=>p.name == name && p.user == user)
 
     var songList=document.getElementById("playlist-song")
+
+    //set playlist likes
+    var likes=document.getElementById("likes")
+    likes.innerText=playlist.likes
+
+    //check if the user liked that playlist and load the correct icon
+    userLikes=playlist.likedBy.find(u=>u==userLogged)
+    if (userLikes!=null){
+        const likeIcon=document.querySelector(".fa-heart")
+        likeIcon.classList.add("fa-solid")
+    }
+
     //set each song of the playlist
     playlist.songs.forEach(song => {
         var songEl=document.createElement("li")

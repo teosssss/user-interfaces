@@ -29,8 +29,8 @@ body.dark{
     min-width: fit-content;
     min-height: 100vh;
     max-height: 100vh;
-    grid-template-columns: 0.25fr 0.8fr;
-    grid-template-rows: 0.2fr 5fr 0.4fr;
+    grid-template-columns: 0.21fr 0.8fr;
+    grid-template-rows: 0.2fr 4fr 0.4fr;
     grid-gap: 5px;
     grid-template-areas: 
       'header header' 
@@ -150,6 +150,10 @@ button:hover{
     height: 40px;    
     width: 100%;    
 }
+
+.premium{
+    background-color: #62687099;
+}
 .facebook{
     background-color: #1977f3;
 }
@@ -263,6 +267,7 @@ margin-left: 10px;
     'header'
     'sidebar'
     'content'
+    'footer'
     ;
     }
 
@@ -300,6 +305,7 @@ margin-left: 10px;
         'header'
         'sidebar'
         'content'
+        'footer'
         ;
         }
         .main-content{
@@ -330,7 +336,7 @@ margin-left: 10px;
     
 }
 
-@media (min-width:768px) and (max-width: 1200px ) {
+@media (min-width:768px) and (max-width: 1188px ) {
     .grid-container  {
         grid-template-rows: auto auto auto auto;
         grid-template-columns: 1fr;
@@ -338,6 +344,7 @@ margin-left: 10px;
         'header'
         'sidebar'
         'content'
+        'footer'
        ;
         }
         .content {
@@ -441,6 +448,7 @@ input::placeholder{
 }
 
 .wrapper-box{
+    background-image: linear-gradient(to right, #041C32 , #1278B9);
     grid-area: content;
     display: flex;
     align-items: center;
@@ -584,9 +592,11 @@ textarea.input-big{
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
+    margin: 0 10px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    transition-duration: 0.2s;
   }
 
   
@@ -658,9 +668,16 @@ option{
 }
 
 .playlist-box{
+    background-color: #041C32;
     grid-area: content;
     display: flex;
     flex-direction: column;
+}
+
+.playlist-header{
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .song-element{
@@ -689,9 +706,8 @@ option{
 
 /*audio control footbar*/
 .audio-container {
-    padding: 16px;
+    padding:  16px;
     box-shadow: 0 30px 60px rgba(0,0,0,.12), 0 30px 60px rgba(0,0,0,.06);
-
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -828,6 +844,11 @@ input:checked[type="checkbox"]:before{
     border-radius: 10px;
     border-color: black;
 }
+
 .idk{
     display: none;
+
+/*artist page*/
+.song-artist-page{
+    display: inline-flex;
 }

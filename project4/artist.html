@@ -26,6 +26,7 @@
         <div class="header-button">
           <a href="login.html"><button id="login">Log In</button></a>
           <a href="register.html"><button id="register">Register</button></a>
+          <a href="index.html"><button id="logout" onclick="userlogout()">Logout</button></a>
           <a href="user.html"
             ><i
               class="user-icon fa fa-user-circle fa-2xl"
@@ -60,6 +61,12 @@
             <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
           </li>
           <li>
+            <a href="podcast.html"><i class="fa-solid fa-podcast"></i> Podcasts</a>
+          </li>
+          <li>
+            <a href="topPlaylist.html"><i class="fa-solid fa-circle-play"></i> Top playlist</a>
+          </li>
+          <li>
             <a href="search.html"
               ><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Search</a
             >
@@ -74,33 +81,37 @@
         </ul>
       </div>
       <div class="main">
-        <div class="content">
-          <div style="background: none" class="songartistpage">
-            <h1 id="artistName"></h1>
-            <br />
-            <h2>Recent releases</h2>
-          </div>
-        </div>
 
-        <!-- <h2 class="songartistpage">New release:</h2>
-        <br />
-        <p class="counter" id="counter"></p>
-      --></div>
-
-      <div class="audio-container" id="container" style="display: none">
-        <div class="image-box">
-          <img class="audio-bar-img" src="" alt="Album Cover" />
-          <div class="">
-            <p class="songtitle"></p>
-            <p class="songartist"></p>
-          </div>
+        <div class="song-artist-page">
+          <h1 id="artistName"></h1>
+          <button class="add-btn">Follow</button>
         </div>
-        <audio controls>
-          <source src="" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-        <div style="width: 30%"></div>
+          <br />
+          <h2>Recent releases</h2>
+          <br>
+        
+
+      <div class="content">
+        
       </div>
+
+      </div>
+    <div class="footer"></div>
+   
+    </div>
+    <div class="audio-container" id="container" style="display: none">
+      <div class="image-box">
+        <img class="audio-bar-img" src="" alt="Album Cover" />
+        <div class="">
+          <p class="songtitle"></p>
+          <p class="songartist"></p>
+        </div>
+      </div>
+      <audio controls>
+        <source src="" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <div style="width: 30%"></div>
     </div>
   </body>
   <script src="../project4/js/audio.js" type="module"></script>
