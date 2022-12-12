@@ -1,15 +1,15 @@
 // darkmode toggle
 
-const btn = document.getElementById('darkMode');
+const darkModeToggle = document.getElementById('darkMode');
 
 
 const currentTheme = localStorage.getItem("theme");
 if (currentTheme == "dark") {
     document.body.classList.add('dark');
-    btn.checked = true;
+    darkModeToggle.checked = true;
 }
 
-btn.addEventListener('click', () => {
+darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     let theme = "light";
     if (document.body.classList.contains("dark")) {
