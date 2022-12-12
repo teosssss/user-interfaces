@@ -1,20 +1,31 @@
+document.getElementById("logout").style.display="none"
 window.addEventListener("load",()=>{
     //checking if user is logged
     if (isLogged()){
         document.getElementById("login").style.display="none"
         document.getElementById("register").style.display="none"
-        document.querySelector(".user-icon").style.display="block"
+        document.querySelector(".user-icon").style.display="inline"
+        document.getElementById("logout").style.display="inline"
+        ispremium();
         displayPlaylist()
     } 
     
 })
 
+function ispremium(){
+    var username= window.sessionStorage.getItem("user")
+    var premium = window.localStorage.getItem("user")
+}
 
+function userlogout(){
+    if(confirm('Are you sure you want to logout?')) {
+       window.sessionStorage.removeItem("user")
+     }
+}
 
 function isLogged() {
     return window.sessionStorage.getItem("user") != null;
 }
-
 
 function displayPlaylist(){
     //setting the user playlist in the sidebar

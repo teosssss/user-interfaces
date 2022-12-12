@@ -5,9 +5,10 @@ const searchBtn=document.getElementById("search");
 searchBtn.addEventListener("click",async (e)=>{
   e.preventDefault()
   
-  var searchedSong=document.getElementById("song")
+  var searchedSong=document.getElementById("song").value
+  var searchedSonglower = searchedSong.toLowerCase()
   //search if song exist in json file with all the songs
-  var song=myJson.find(s=>s.song==searchedSong.value)
+  var song=myJson.find(s=>s.song.toLowerCase()==searchedSonglower)
   
   var searchGrid=document.querySelector(".search-grid")
   if (searchGrid.style.display=="none"){
@@ -22,7 +23,6 @@ searchBtn.addEventListener("click",async (e)=>{
   //set title and author
   title.textContent=song.song
   artist.textContent=song.author
-
 })
 
 window.addEventListener("load",()=>{

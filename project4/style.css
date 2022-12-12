@@ -124,6 +124,10 @@ button:hover{
     height: 40px;    
     width: 100%;    
 }
+
+.premium{
+    background-color: #62687099;
+}
 .facebook{
     background-color: #1977f3;
 }
