@@ -38,10 +38,7 @@ window.addEventListener("load",()=>{
         songDiv.appendChild(artist)
         var container=document.querySelector(".content")
         container.appendChild(songDiv)
-       
     });
 
 
-
-    
 })

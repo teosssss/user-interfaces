@@ -260,20 +260,22 @@ margin-left: 10px;
     text-align: center;
     max-width: 170px;
     max-height: 170px;
-    transition: filter .5s ease-in-out;
-    -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: grayscale(100%); /* FF 35+ */
+    transition-duration: .3s;
+    /* transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);  */
 
 }
 
 .podcast-genre-cover:hover {
-    align-self: center;
+    opacity: 0.8;
+    /* align-self: center;
     text-align: center;
     max-width: 170px;
     max-height: 170px;
     transition: filter .5s ease-in-out;
-    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: grayscale(0%); /* FF 35+ */
+    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ 
+    filter: grayscale(0%); FF 35+ */
 
 }
 /*responsiveness*/
