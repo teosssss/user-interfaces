@@ -74,6 +74,7 @@ making borders, gaps and deciding how things looks*/
     background-image: linear-gradient(to right, #041C32 , #1278B9);
 }
 
+
 .content{
     overflow: auto;
     grid-area: content;
@@ -230,6 +231,56 @@ audio {
 
 .songartistpage{
 margin-left: 10px;
+}
+
+.podcast-header {
+    padding-bottom: 15px;
+}
+
+.podcast-div{
+    max-width: 200px;
+    max-height: 150px;
+    transition-duration: 0.3s;
+    text-align: center;
+    position: relative;
+}
+
+.podcast-title {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+.songdiv>i{
+    position: absolute;
+    bottom: 22px;
+    right: -6px;
+    margin-bottom: 2px;
+}
+
+.podcast-genre-cover {
+    align-self: center;
+    text-align: center;
+    max-width: 170px;
+    max-height: 170px;
+    transition-duration: .3s;
+    /* transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);  */
+
+}
+
+.podcast-genre-cover:hover {
+    opacity: 0.8;
+    /* align-self: center;
+    text-align: center;
+    max-width: 170px;
+    max-height: 170px;
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ 
+    filter: grayscale(0%); FF 35+ */
+
 }
 /*responsiveness*/
         

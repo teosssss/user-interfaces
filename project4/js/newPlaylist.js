@@ -13,9 +13,11 @@ document.getElementById("create").onclick=()=>{
         user: sessionStorage.getItem("user"),
         name: document.getElementById("name").value,
         description: document.getElementById("description").value,
+
         likes: 0,
         likedBy:[],
         songs:[]
+
     }
 
     

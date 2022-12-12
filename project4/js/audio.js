@@ -1,6 +1,7 @@
 //import json file 
 import myJson from '../json/song.json' assert {type: 'json'};
 
+
 //set a delay to make all the other scripts work
 function delay() {
     setTimeout(function() {
@@ -27,9 +28,9 @@ function loadSong() {
         var searchedSong=el.nextElementSibling;
 
         //for each playIcon set the song bar when its clicked
-        el.addEventListener("click",()=>{
+        el.addEventListener("click",(a)=>{
             var song=myJson.find(s=>s.song==searchedSong.textContent.toLowerCase())
-    
+
             var audioContainer=document.getElementById("container")
             if (audioContainer.style.display=="none"){
             audioContainer.style.display="inline-flex"

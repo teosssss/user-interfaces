@@ -54,11 +54,7 @@ window.addEventListener("load",()=>{
         songDiv.appendChild(artist)
         var container=document.querySelector(".content")
         container.appendChild(songDiv)
-       
     });
-
-
-
     
 })
 
@@ -86,4 +82,5 @@ btn.addEventListener("click",()=>{
         }
         window.localStorage.setItem("users",JSON.stringify(users))
     }
+
 })
