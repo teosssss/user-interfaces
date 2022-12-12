@@ -28,7 +28,7 @@ function loadSong() {
 
         //for each playIcon set the song bar when its clicked
         el.addEventListener("click",(a)=>{
-            var song=myJson.find(s=>s.song==searchedSong.textContent.toLowerCase())
+            var song=myJson.find(s=>s.song.toLowerCase()==searchedSong.textContent.toLowerCase())
 
             var audioContainer=document.getElementById("container")
             if (audioContainer.style.display=="none"){
