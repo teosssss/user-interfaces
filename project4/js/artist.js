@@ -81,6 +81,8 @@ btn.addEventListener("click",()=>{
 
         }
         window.localStorage.setItem("users",JSON.stringify(users))
+    } else {
+        alert("Login")
     }
 
 })

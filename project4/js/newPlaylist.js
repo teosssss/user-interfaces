@@ -1,4 +1,5 @@
 document.getElementById("create").onclick=()=>{
+    if (window.sessionStorage.getItem("user")!=null){
     var playlists=window.localStorage.getItem("playlists")
 
     if (playlists === null) {
@@ -19,6 +20,11 @@ document.getElementById("create").onclick=()=>{
         songs:[]
 
     }
+
+    } else [
+        alert("login")
+    ]
+
 
     
   

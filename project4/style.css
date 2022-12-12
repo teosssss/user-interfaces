@@ -126,6 +126,10 @@ button:hover{
     width: 100%;    
 }
 
+a[href="index.html"]{
+    text-decoration: none;
+}
+
 .premium{
     background-color: #62687099;
 }

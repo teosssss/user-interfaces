@@ -13,12 +13,15 @@ playlists.forEach(playlist => {
     var parentNode=document.querySelector(".content")
     var playlistDiv=document.createElement("div")
     var playlistLink=document.createElement("a")
+    var image=document.createElement("img")
+    image.classList.add("songcover")
+    image.src="../project4/assets/images/podcast"+count+".jpg"
     playlistLink.href="playlist.html?name="+playlist.name+"&user="+playlist.user
     playlistLink.style="text-decoration:none"
     playlistDiv.classList.add("songdiv")
     var playlistTitle=document.createElement("p")
     playlistTitle.classList.add("songtitle")
-    playlistTitle.textContent=count+". "+playlist.name+" "+playlist.likes+" "
+    playlistTitle.textContent=count+". "+playlist.name+"  "+playlist.likes+"  "
     var likeIcon=document.createElement("i")
     likeIcon.classList.add("fa-heart")
     //check if user liked the song and change the icon
@@ -41,7 +44,7 @@ playlists.forEach(playlist => {
     playlistUser.textContent=playlist.user
 
     parentNode.appendChild(playlistDiv)
-    
+    playlistDiv.appendChild(image)
     playlistDiv.appendChild(playlistLink)
     playlistLink.appendChild(playlistTitle)
     playlistLink.appendChild(playlistUser)
