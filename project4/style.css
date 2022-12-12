@@ -13,7 +13,7 @@ making borders, gaps and deciding how things looks*/
     min-height: 100vh;
     max-height: 100vh;
     grid-template-columns: 0.21fr 0.8fr;
-    grid-template-rows: 0.2fr 5fr 0.4fr;
+    grid-template-rows: 0.2fr 4fr 0.4fr;
     grid-gap: 5px;
     grid-template-areas: 
       'sidebar header' 
@@ -241,6 +241,7 @@ margin-left: 10px;
     'header'
     'sidebar'
     'content'
+    'footer'
     ;
     }
 
@@ -275,6 +276,7 @@ margin-left: 10px;
         'header'
         'sidebar'
         'content'
+        'footer'
         ;
         }
         .content {
@@ -308,6 +310,7 @@ margin-left: 10px;
         'header'
         'sidebar'
         'content'
+        'footer'
        ;
         }
         .content {
@@ -550,9 +553,11 @@ textarea.input-big{
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
+    margin: 0 10px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    transition-duration: 0.2s;
   }
 
   
@@ -662,9 +667,8 @@ option{
 
 /*audio control footbar*/
 .audio-container {
-    padding: 16px;
+    padding:  16px;
     box-shadow: 0 30px 60px rgba(0,0,0,.12), 0 30px 60px rgba(0,0,0,.06);
-
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -715,3 +719,7 @@ font-size: 30px;
 }
 
 
+/*artist page*/
+.song-artist-page{
+    display: inline-flex;
+}
