@@ -1,15 +1,24 @@
+//Register
 const registerBtn=document.getElementById("register")
-
 registerBtn.addEventListener('click',(e)=>{
     e.preventDefault()
     if (validateEmail(document.getElementById("userEmail").value) && validatePassword((document.getElementById("userPassword").value))){
-        registerLocal()
+        registerLocal(false)
+    }
+})
+
+//Premium
+const premiumBtn=document.getElementById("premium")
+premiumBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    if (validateEmail(document.getElementById("userEmail").value) && validatePassword((document.getElementById("userPassword").value))){
+        registerLocal(true)
     }
 })
  
 
 
-function registerLocal() {
+function registerLocal(premium) {
     var users = window.localStorage.getItem("users")
 
     if (users === null) {
@@ -25,6 +34,8 @@ function registerLocal() {
                 username: document.getElementById("userName").value,
                 email: document.getElementById("userEmail").value,
                 password: document.getElementById("userPassword").value,
+
+                followedArtist:[]
         }    
         
 
@@ -38,19 +49,7 @@ function registerLocal() {
         } else {
             users.push(user)
             localStorage.setItem("users",JSON.stringify(users))
-            //set empty playlist for each user registered
-            let playlists=localStorage.getItem("playlists")
-            playlists=JSON.parse(playlists)
-
-            if (playlists===null){
-                playlists=[]
-            }
-            newUserPlaylists={
-                user:user.username,
-                playlists:[]
-            }
-            playlists.push(newUserPlaylists)
-            window.localStorage.setItem("playlists",JSON.stringify(playlists))
+            
             //go to login
             location.assign("login.html")
 

@@ -27,6 +27,7 @@
         <div class="user-button">
         <a href="login.html"><button id="login">Log In</button></a>
         <a href="register.html"><button id="register">Register</button></a>
+        <a href="index.html"><button id="logout" onclick="userlogout()">Logout</button></a>
         <a href="user.html"
           ><i
             class="user-icon fa fa-user-circle fa-2xl"
@@ -51,6 +52,9 @@
             <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
           </li>
           <li>
+            <a href="podcast.html"><i class="fa-solid fa-podcast"></i> Podcasts</a>
+          </li>
+          <li>
             <a href="topPlaylist.html"><i class="fa-solid fa-circle-play"></i> Top playlist</a>
           </li>
           <li>
@@ -71,99 +75,11 @@
         </ul>
       </div>
       <div class="main">
-        <h1>Welcome Back!</h1>
+        <h1 style="padding:10px">Top playlist</h1>
       <div class="content">
         
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/skyscrapers.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">Sky Scrapers</p>
-          <a style="text-decoration: none" href="artist.html?name=HoliznaCC0"
-            ><p class="songartist">HoliznaCC0</p></a
-          >
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/seasonschange.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">Seasons Change</p>
-          <a style="text-decoration: none" href="artist.html?name=HoliznaCC0"
-            ><p class="songartist">HoliznaCC0</p></a
-          >
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/riorr.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">Riorr</p>
-          <a style="text-decoration: none" href="artist.html?name=Audiorezout">
-          <p class="songartist">Audiorezout</p></a>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/reflection.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">Reflection</p>
-          <a style="text-decoration: none" href="artist.html?name=Mikah Beats">
-          <p class="songartist">Mikah Beats</p></a>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/sweetlove.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">Sweet Love</p>
-          <a style="text-decoration: none" href="artist.html?name=Maarten Schellekens">
-          <p class="songartist">Maarten Schellekens</p></a>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/sunset.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">SUNSET</p>
-          <a style="text-decoration: none" href="artist.html?name=Caslo">
-          <p class="songartist">Caslo</p></a>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/wicked.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">Wicked</p>
-          <a style="text-decoration: none" href="artist.html?name=Pierce Murphy">
-          <p class="songartist">Pierce Murphy</p></a>
-        </div>
-        <div class="songdiv">
-          <img
-            class="songcover"
-            src="assets/images/permanentdamage.jpg"
-            alt="Album Cover"
-          />
-          <i class="playIcon fa-solid fa-circle-play fa-2xl"></i>
-          <p class="songtitle">Permanent Damage</p>
-          <a style="text-decoration: none" href="artist.html?name=Mikah Beats">
-          <p class="songartist">Mikah Beats</p></a>
-        </div>
+       
+        
         
       </div>
       </div>
@@ -175,6 +91,7 @@
         <div class="">
           <p class="songtitle"></p>
           <p class="songartist"></p>
+          
         </div>
       </div>
       <audio controls>
@@ -185,6 +102,6 @@
     </div>
   </body>
   <script src="../project4/js/index.js"></script>
-  <script src="../project4/js/artist.js" type="module"></script>
+  <script src="../project4/js/topPlaylist.js"></script>
   <script src="../project4/js/audio.js"  type="module"></script>
 </html>
