@@ -78,3 +78,37 @@ addBtn.addEventListener("click",()=>{
    
 
 
+ window.addEventListener("load",()=>{
+    var artistName=document.getElementById("artistName")
+    //get from the query the artist
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const searchedSong = urlParams.get('name')
+    var searchedSonglower = searchedSong.toLowerCase()
+
+
+    if (searchedSonglower!=null &&  myJson.find(s=>s.song.toLowerCase()==searchedSonglower) ){
+        //search if song exist in json file with all the songs
+        var song=myJson.find(s=>s.song.toLowerCase()==searchedSonglower)
+        
+        var searchGrid=document.querySelector(".search-grid")
+        if (searchGrid.style.display=="none"){
+          searchGrid.style.display="grid"
+        }
+        var image=searchGrid.querySelector(".songcover")
+        var title=searchGrid.querySelector(".songtitle")
+        var artist=searchGrid.querySelector(".songartist")
+      
+        //set the new image and audio path
+        image.src="../project4/assets/images/"+song.song.replace(/ /g,'')+".jpg"
+        //set title and author
+        title.textContent=song.song
+        artist.textContent=song.author
+    } else {
+        alert("song does not exist")
+    }
+    
+    
+ })
+
+
