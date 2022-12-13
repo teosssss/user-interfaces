@@ -49,3 +49,13 @@ function displayPlaylist(){
         sidebarList.append(el)
     });
 }
+
+const searchBtn=document.getElementById("search");
+
+searchBtn.addEventListener("click",async (e)=>{
+  e.preventDefault()
+  var url="search.html?name="+document.getElementById("song").value
+  location.assign(url)
+})
+
+
