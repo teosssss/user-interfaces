@@ -79,7 +79,6 @@ addBtn.addEventListener("click",()=>{
 
 
  window.addEventListener("load",()=>{
-    var artistName=document.getElementById("artistName")
     //get from the query the artist
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);

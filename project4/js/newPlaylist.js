@@ -33,14 +33,14 @@ document.getElementById("create").onclick=()=>{
 
    //if playlist is correct and is unique push playlist in local storage
     if (userPlaylists.find(p=>p.name==newPlaylist.name)){
-        alert("Nome playlist gia esistente")
+        alert("This name already exist")
     } else if(newPlaylist.name==""){
-        alert("aggiungere un nome alla playlist")
+        alert("add a name")
     }else{
         playlists.push(newPlaylist)
         window.localStorage.setItem("playlists",JSON.stringify(playlists))
         
-        alert("playlist creata con successo!")
+        alert("Playlist created")
     }
 
 }
