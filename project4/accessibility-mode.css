@@ -909,3 +909,18 @@ input:checked[type="checkbox"]:before{
 .idk{
     display: none;
 }
+
+.ad-premium{
+    padding: 25px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+    transition: .3s;
+
+}
+.ad-premium:hover{
+    transform: scale(1.1);
+}
