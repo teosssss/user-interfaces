@@ -1,5 +1,11 @@
 [
     {"category":"Books","song":"The Stranger","author":"AlbertCamus","path":"../project4/assets/Podcasts/books/The Stranger - Camus.mp3"},
-    {"category":"Books","song":"Thus Spoke Zarathustra","author":"FriedrichNietzsche","path":"../project4/assets/Podcasts/books/Thus Spoke Zarathustra - Nietzsche.mp3"}
-    
+    {"category":"Books","song":"Thus Spoke Zarathustra","author":"FriedrichNietzsche","path":"../project4/assets/Podcasts/books/Thus Spoke Zarathustra - Nietzsche.mp3"},
+    {"category":"Comedy","song":"Best of Jimmy OYang","author":"JimmyOYang","path":"../project4/assets/Podcasts/comedy/BestofJimmyOYangcomedy.mp3"},
+    {"category":"Comedy","song":"Funniest Podcast Compilation","author":"YinYangMonkey","path":"../project4/assets/Podcasts/comedy/FunnyPodcast.mp3"},
+    {"category":"Education","song":"Cooking with Daniel Holzman","author":"JoeRogan","path":"../project4/assets/Podcasts/education/JoeRoganCooking.mp3"},
+    {"category":"Education","song":"Take Care of Garden","author":"RobinLaneFox","path":"../project4/assets/Podcasts/education/GardeningPodcast.mp3"},
+    {"category":"Pop Culture","song":"PopCulture Moments","author":"Various","path":"../project4/assets/Podcasts/popculture/popculturemoments.mp3"},
+    {"category":"Pop Culture","song":"Marvel Defenders","author":"PopCultureDetective","path":"../project4/assets/Podcasts/popculture/MarvelDefendersOfTheStatusQuo.mp3"}
+
 ]
