@@ -908,3 +908,13 @@ input:checked[type="checkbox"]:before{
 .idk{
     display: none;
 }
+
+.ad-premium{
+    padding: 20px;
+    font-size: 17px;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+}
