@@ -15,6 +15,12 @@ window.addEventListener("load",()=>{
 
     var songList=document.getElementById("playlist-song")
 
+    //disable add song button if user is not the owner of the playlist
+    if (user!=userLogged){
+       var btn= document.querySelector(".add-btn")
+       btn.style.display="none"
+    }
+
     //set playlist likes
     var likes=document.getElementById("likes")
     likes.innerText=playlist.likes

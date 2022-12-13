@@ -112,8 +112,8 @@
       <div class="playlist-box">
         <div class="inline">
           <h2>PLAYLIST</h2>
-          <button class="add-btn">
-            <a href="search.html"><i class="fa fa-plus"></i></a>
+          <button class="add-btn" onclick="getQueryString()">
+            <i class="fa fa-plus"></i>
           </button>
         </div>
         <h1 class="playlist-name"></h1>
@@ -146,6 +146,15 @@
       <div style="width: 30%"></div>
     </div>
   </body>
+  <script>
+    function getQueryString(){
+          //get playlist name from url query string
+          const queryString = window.location.search;
+          const urlParams = new URLSearchParams(queryString);
+          const name = urlParams.get('name')
+          location.assign("playlist-add.html?playlist="+name)
+    }
+  </script>
   <script src="../project4/js/index.js"></script>
   <script src="../project4/js/playlist.js"></script>
   <script src="../project4/js/autocomplete.js"></script>
